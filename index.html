@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aimee Cass</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Lora:wght@400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --yellow: #FFFF00;
+      --black: #000000;
+      --white: #ffffff;
+      --font-mono: 'IBM Plex Mono', monospace;
+      --font-serif: 'Lora', serif;
+    }
+
+    body {
+      background: var(--white);
+      color: var(--black);
+      font-family: var(--font-serif);
+      font-weight: 400;
+      line-height: 1.5;
+      padding: 2rem;
+      max-width: 800px;
+    }
+
+    /* NAME */
+    .site-name {
+      font-family: var(--font-mono);
+      font-weight: 500;
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background-color: var(--yellow);
+      display: inline-block;
+      padding: 0 0.15em;
+      margin-bottom: 2.5rem;
+    }
+
+    /* NAV */
+    nav {
+      margin-top: 2.5rem;
+    }
+
+    /* TOP LEVEL LINKS */
+    .top-links {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+
+    .top-links li {
+      margin-bottom: 0.15rem;
+    }
+
+    .top-links a {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: 1rem;
+      color: var(--black);
+      text-decoration: none;
+    }
+
+    .top-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* SECTION TITLES */
+    .nav-section {
+      margin-bottom: 2rem;
+    }
+
+    .nav-section-title {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      color: var(--black);
+    }
+
+    /* TREE */
+    .tree {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .tree li {
+      margin-bottom: 0.15rem;
+    }
+
+    .tree a {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: 1rem;
+      color: var(--black);
+      text-decoration: none;
+    }
+
+    .tree a:hover {
+      text-decoration: underline;
+    }
+
+    /* TOGGLE BUTTONS */
+    .toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: 1rem;
+      color: var(--black);
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .toggle::before {
+      content: '›';
+      display: inline-block;
+      transition: transform 0.15s ease;
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    .toggle.open::before {
+      transform: rotate(90deg);
+    }
+
+    /* SUBTREES */
+    .subtree {
+      list-style: none;
+      padding-left: 1.2rem;
+      margin-top: 0.15rem;
+      display: none;
+    }
+
+    .subtree.open {
+      display: block;
+    }
+
+    .subtree li {
+      margin-bottom: 0.15rem;
+    }
+
+    .subtree a {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: 1rem;
+      color: var(--black);
+      text-decoration: none;
+    }
+
+    .subtree a:hover {
+      text-decoration: underline;
+    }
+
+    .subtree .subtree {
+      padding-left: 1.2rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 480px) {
+      body {
+        padding: 1.25rem;
+      }
+
+      .site-name {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="site-name">Aimee Cass</div>
+
+  <nav>
+    <ul class="top-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-section">
+      <div class="nav-section-title">Writing</div>
+      <ul class="tree">
+
+        <li>
+          <button class="toggle" aria-expanded="false" data-target="professional">Professional</button>
+          <ul class="subtree" id="professional">
+            <li><a href="writing/conversation-design.html">Conversation Design</a></li>
+            <li><a href="writing/copy-content.html">Copy &amp; Content</a></li>
+            <li><a href="writing/script.html">Script</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <button class="toggle" aria-expanded="false" data-target="literary">Literary</button>
+          <ul class="subtree" id="literary">
+            <li>
+              <button class="toggle" aria-expanded="false" data-target="essays">Essays</button>
+              <ul class="subtree" id="essays">
+                <li><a href="writing/on-slipping.html">On Slipping</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="toggle" aria-expanded="false" data-target="fiction">Fiction &amp; Poetry</button>
+              <ul class="subtree" id="fiction">
+                <li><a href="writing/island.html">Island</a></li>
+                <li><a href="writing/la-nina.html">La Niña</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">Works</div>
+      <ul class="tree">
+
+        <li>
+          <button class="toggle" aria-expanded="false" data-target="hotglass">Hot Glass</button>
+          <ul class="subtree" id="hotglass">
+            <li><a href="works/soup.html">SOUP</a></li>
+            <li><a href="works/ios-vases.html">Io's Vases</a></li>
+          </ul>
+        </li>
+
+        <li><a href="works/photography.html">Photography</a></li>
+        <li><a href="works/painting-drawing.html">Painting &amp; Drawing</a></li>
+
+      </ul>
+    </div>
+
+  </nav>
+
+  <script>
+    document.querySelectorAll('.toggle').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var targetId = this.getAttribute('data-target');
+        var subtree = document.getElementById(targetId);
+        var isOpen = subtree.classList.contains('open');
+        subtree.classList.toggle('open', !isOpen);
+        this.classList.toggle('open', !isOpen);
+        this.setAttribute('aria-expanded', !isOpen);
+      });
+    });
+  </script>
+
+</body>
+</html>
