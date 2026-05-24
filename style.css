@@ -359,9 +359,12 @@ body {
   height: auto;     
 }
 
+/* -------------------------------------------------------------
+   Essay & Literary Page Layout Blocks
+------------------------------------------------------------- */
 .essay-container {
   width: 100%;
-  max-width: 680px; 
+  max-width: 620px; 
 }
 
 .essay-title {
@@ -369,7 +372,7 @@ body {
   font-weight: 500;
   font-size: 1.15rem;
   color: var(--black);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.8rem; 
 }
 
 .essay-year {
@@ -411,6 +414,9 @@ body {
   margin-bottom: 1.5rem; 
 }
 
+/* -------------------------------------------------------------
+   Responsive adjustments for mobile screens
+------------------------------------------------------------- */
 @media (max-width: 480px) {
   body { padding: 0.75rem; }
   .site-name { font-size: 1.4rem; } 
