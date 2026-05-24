@@ -152,27 +152,32 @@ body {
   display: inline-block;
 }
 
-/* Active nav link — olive colour, no underline */
+/* Active nav link — olive text-highlight style */
 .top-links a.active {
-  color: var(--olive);
+  color: var(--black);
   text-decoration: none;
+  background-color: var(--olive);
+  padding: 0 0.2em;
 }
 
 /* CV page two-column layout */
 .page-layout {
   display: flex;
-  gap: 2.5rem;
+  gap: 0;
   align-items: flex-start;
 }
 
 .page-nav {
   flex: 0 0 auto;
   width: 220px;
+  padding-right: 2.5rem;
 }
 
 .page-content {
   flex: 1 1 0;
   min-width: 0;
+  border-left: 1px solid #d0d0d0;
+  padding-left: 2.5rem;
 }
 
 /* CV content */
