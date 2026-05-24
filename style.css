@@ -392,4 +392,97 @@ body {
   text-decoration-color: var(--olive);
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
-  -webkit-text-fill-color: var
+  -webkit-text-fill-color: var(--black) !important;
+}
+
+.about-link:hover {
+  text-decoration-color: var(--black);
+}
+
+/* -------------------------------------------------------------
+   Essay & Literary Page Layout Blocks
+------------------------------------------------------------- */
+.essay-container {
+  width: 100%;
+  max-width: 620px; 
+}
+
+.essay-title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: var(--black);
+  margin-bottom: 0.8rem; 
+}
+
+.essay-year {
+  color: #b5b25c; 
+  font-weight: 400;
+}
+
+.essay-subtitle {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  font-style: italic; 
+  color: var(--black);
+  margin-bottom: 2rem; 
+}
+
+.essay-subtitle-link,
+.essay-subtitle-link:link,
+.essay-subtitle-link:visited,
+.essay-subtitle-link:active {
+  color: var(--black) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  -webkit-text-fill-color: var(--black) !important;
+}
+
+.essay-subtitle-link:hover {
+  text-decoration-color: var(--black);
+}
+
+.essay-body p {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 0.88rem; 
+  line-height: 1.7;   
+  color: var(--black);
+  margin-bottom: 1.5rem; 
+}
+
+/* -------------------------------------------------------------
+   Responsive adjustments for mobile screens & tablets
+------------------------------------------------------------- */
+@media (max-width: 768px) {
+  body { padding: 0.75rem; }
+  .site-name { font-size: 1.4rem; } 
+  
+  .page-layout { display: flex; flex-direction: column; gap: 1.5rem; }
+  .page-nav { width: 100%; padding-right: 0; }
+  
+  .page-content {
+    border-left: none;
+    padding-left: 0;      
+    border-top: 1px solid #e8e8e8;
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: flex-start; 
+    width: 100%;
+  }
+  
+  .video-container,
+  .magazine-container,
+  .essay-container {
+    width: 100%; 
+  }
+  
+  .cv-columns,
+  .about-columns { 
+    grid-template-columns: 1fr; 
+    gap: 1.5rem 0; 
+  }
+}
