@@ -152,15 +152,19 @@ body {
   display: inline-block;
 }
 
-/* Active nav link — olive text-highlight style */
+/* Active nav link — tight, 60% opacity olive highlight that doesn't shift text */
 .top-links a.active {
   color: var(--black);
   text-decoration: none;
-  background-color: var(--olive);
-  padding: 0 0.2em;
+  background-color: #C8C46699; 
+  display: inline;
+  padding: 0.05em 0.15em;
+  margin: 0 -0.15em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
-/* CV page two-column layout */
+/* CV and general page two-column layout */
 .page-layout {
   display: flex;
   gap: 0;
@@ -224,10 +228,31 @@ body {
   font-style: normal;
 }
 
-@media (max-width: 480px) {
-  body { padding: 0.75rem; }
-  .site-name { font-size: 1.1rem; }
-  .page-layout { flex-direction: column; gap: 1.5rem; }
-  .page-nav { width: 100%; }
-  .cv-columns { grid-template-columns: 1fr; }
+/* Contact Page Specific Layout (Cargo Vibe) */
+.contact-container {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.6;
 }
+
+.contact-intro {
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.contact-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--black);
+  flex-shrink: 0;
+}
+
+.contact
