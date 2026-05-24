@@ -167,10 +167,10 @@ body {
   -webkit-box-decoration-break: clone;
 }
 
-/* Tightened Asymmetric Architectural Grid Layout */
+/* Precise Cargo Asymmetric Layout */
 .page-layout {
   display: grid;
-  /* Left column wraps perfectly tight around the content text, remaining space given to content */
+  /* Left column matches your menu text length perfectly */
   grid-template-columns: max-content 1fr;
   gap: 0;
   align-items: flex-start;
@@ -178,16 +178,16 @@ body {
 
 .page-nav {
   width: 100%;
-  /* This controls the exact tiny gap between your text links and the line (1.8rem) */
-  padding-right: 1.8rem; 
+  /* Large padding on the right creates the big empty spacer gap BEFORE the line */
+  padding-right: 5.5rem; 
 }
 
 .page-content {
   width: 100%;
-  /* Subtly lightens the border line to a delicate whisper */
+  /* Line lives here now! It acts as a left border for the content block */
   border-left: 1px solid #e8e8e8;
-  /* Generates huge breathing space to push main content rightward away from the line */
-  padding-left: 5.5rem; 
+  /* Tight padding here pulls the line close to your CV text / Contact text */
+  padding-left: 1.8rem; 
 }
 
 /* Wide View CV Layout Columns */
@@ -245,49 +245,3 @@ body {
 
 .contact-intro {
   margin-bottom: 1rem;
-  color: var(--black);
-}
-
-.contact-method {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.4rem;
-}
-
-.contact-icon {
-  width: 14px !important;
-  height: 14px !important;
-  max-width: 14px !important;
-  max-height: 14px !important;
-  color: var(--black);
-  flex-shrink: 0;
-  display: inline-block;
-}
-
-.contact-link {
-  color: var(--black);
-  text-decoration: underline;
-  text-decoration-color: var(--olive);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-}
-
-.contact-link:hover {
-  text-decoration-color: var(--black);
-}
-
-/* Responsive adjustments for mobile screens */
-@media (max-width: 480px) {
-  body { padding: 0.75rem; }
-  .site-name { font-size: 1.1rem; }
-  .page-layout { display: flex; flex-direction: column; gap: 1.5rem; }
-  .page-nav { width: 100%; padding-right: 0; }
-  .page-content {
-    border-left: none;
-    padding-left: 0;
-    border-top: 1px solid #e8e8e8;
-    padding-top: 1.5rem;
-  }
-  .cv-columns { grid-template-columns: 1fr; gap: 0; }
-}
