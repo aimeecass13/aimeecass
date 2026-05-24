@@ -321,3 +321,15 @@ body {
   width: 100%;
   max-width: 680px;
 }
+@media (max-width: 767px) {
+  .page-layout {
+    grid-template-columns: 1fr; /* Stack columns on mobile */
+  }
+  .page-nav {
+    padding-right: 0; /* Remove side padding on mobile */
+  }
+  .page-content {
+    border-left: none; /* Remove side border on mobile */
+    padding-left: 0;
+  }
+}
