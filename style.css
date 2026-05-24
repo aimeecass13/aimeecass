@@ -159,10 +159,11 @@ body {
 .subsubtree a.active .label {
   color: var(--black);
   text-decoration: none;
-  background-color: #C8C46699; 
+  background-color: #E6F4ED; 
   display: inline;
-  padding: 0.05em 0.15em;
-  margin: 0 -0.15em;
+  padding: 0.15em 0.35em;
+  margin: 0 -0.35em;
+  border-radius: 3px;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
