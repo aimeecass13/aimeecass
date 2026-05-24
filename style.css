@@ -328,7 +328,8 @@ body {
   .page-nav {
     padding-right: 0; /* Remove side padding on mobile */
   }
-  .page-content {
+ .page-content {
     border-left: none; /* Remove side border on mobile */
     padding-left: 0;
   }
+}
