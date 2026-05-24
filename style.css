@@ -18,8 +18,7 @@ body {
   font-family: var(--font-serif);
   font-weight: 500;
   padding: 0.9rem;
-  /* Max-width expanded to allow the content columns to stretch wide like Cargo */
-  max-width: 1040px; 
+  max-width: 1120px; 
 }
 
 .site-name {
@@ -121,7 +120,6 @@ body {
   font-size: 0.78rem;
   color: var(--black);
   text-decoration: none;
-  /* Protects longer titles from breaking or wrapping to a new line */
   white-space: nowrap; 
 }
 
@@ -170,7 +168,6 @@ body {
 /* Precise Cargo Asymmetric Layout */
 .page-layout {
   display: grid;
-  /* Left column matches your menu text length perfectly */
   grid-template-columns: max-content 1fr;
   gap: 0;
   align-items: flex-start;
@@ -178,23 +175,21 @@ body {
 
 .page-nav {
   width: 100%;
-  /* Large padding on the right creates the big empty spacer gap BEFORE the line */
-  padding-right: 5.5rem; 
+  /* Expanded to shift both the line and the right-side content roughly 1.8cm further right */
+  padding-right: 7.5rem; 
 }
 
 .page-content {
   width: 100%;
-  /* Line lives here now! It acts as a left border for the content block */
   border-left: 1px solid #e8e8e8;
-  /* Tight padding here pulls the line close to your CV text / Contact text */
-  padding-left: 1.8rem; 
+  /* Reduced padding by 15% to pull the text closer to the line */
+  padding-left: 1.5rem; 
 }
 
 /* Wide View CV Layout Columns */
 .cv-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* Expands inner space between text data blocks */
   gap: 0 5rem; 
 }
 
@@ -245,3 +240,49 @@ body {
 
 .contact-intro {
   margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.contact-icon {
+  width: 14px !important;
+  height: 14px !important;
+  max-width: 14px !important;
+  max-height: 14px !important;
+  color: var(--black);
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.contact-link {
+  color: var(--black);
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.contact-link:hover {
+  text-decoration-color: var(--black);
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 480px) {
+  body { padding: 0.75rem; }
+  .site-name { font-size: 1.1rem; }
+  .page-layout { display: flex; flex-direction: column; gap: 1.5rem; }
+  .page-nav { width: 100%; padding-right: 0; }
+  .page-content {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid #e8e8e8;
+    padding-top: 1.5rem;
+  }
+  .cv-columns { grid-template-columns: 1fr; gap: 0; }
+}
