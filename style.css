@@ -153,8 +153,11 @@ body {
   display: inline-block;
 }
 
-/* Active nav link — tight, 60% opacity olive highlight that doesn't shift text */
-.top-links a.active {
+/* Active nav link background indicator */
+.top-links a.active,
+.tree a.active .label,
+.subtree a.active .label,
+.subsubtree a.active .label {
   color: var(--black);
   text-decoration: none;
   background-color: #C8C46699; 
@@ -165,7 +168,7 @@ body {
   -webkit-box-decoration-break: clone;
 }
 
-/* Precise Cargo Asymmetric Layout */
+/* Precise Cargo Asymmetric Layout Setup */
 .page-layout {
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -175,14 +178,12 @@ body {
 
 .page-nav {
   width: 100%;
-  /* Expanded to shift both the line and the right-side content roughly 1.8cm further right */
   padding-right: 7.5rem; 
 }
 
 .page-content {
   width: 100%;
   border-left: 1px solid #e8e8e8;
-  /* Reduced padding by 15% to pull the text closer to the line */
   padding-left: 1.5rem; 
 }
 
@@ -218,17 +219,9 @@ body {
   color: var(--black);
 }
 
-.cv-entry .role {
-  font-style: normal;
-}
-
-.cv-entry .org {
-  font-style: italic;
-}
-
-.cv-entry .date {
-  font-style: normal;
-}
+.cv-entry .role { font-style: normal; }
+.cv-entry .org { font-style: italic; }
+.cv-entry .date { font-style: normal; }
 
 /* Contact Page Layout Details */
 .contact-container {
@@ -260,8 +253,11 @@ body {
   display: inline-block;
 }
 
-.contact-link {
-  color: var(--black);
+.contact-link, 
+.contact-link:link, 
+.contact-link:visited, 
+.contact-link:active {
+  color: var(--black) !important;
   text-decoration: underline;
   text-decoration-color: var(--olive);
   text-decoration-thickness: 1px;
@@ -269,6 +265,51 @@ body {
 }
 
 .contact-link:hover {
+  text-decoration-color: var(--black);
+}
+
+/* -------------------------------------------------------------
+   New Video Page Styling Blocks (Cinema Layout)
+------------------------------------------------------------- */
+.video-container {
+  width: 100%;
+}
+
+/* Perfect 16:9 Aspect ratio frame trick for clean scaling */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Creates 16:9 shape canvas box */
+  height: 0;
+  margin-bottom: 0.6rem;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Fine-detailed muted editorial media caption */
+.video-caption {
+  font-family: var(--font-serif);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #666666;
+  line-height: 1.4;
+}
+
+.caption-link {
+  color: #666666;
+  text-decoration: underline;
+  text-decoration-color: #b5b25c;
+  text-underline-offset: 2px;
+}
+
+.caption-link:hover {
+  color: var(--black);
   text-decoration-color: var(--black);
 }
 
