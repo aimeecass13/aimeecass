@@ -22,6 +22,8 @@ body {
   max-width: 1120px; 
 }
 
+/* ─── SITE NAME ─────────────────────────────────────────── */
+
 .site-name {
   font-family: var(--font-mono);
   font-weight: 700;
@@ -34,6 +36,8 @@ body {
   text-decoration: none;
   line-height: 1.25;
 }
+
+/* ─── TOP LINKS ─────────────────────────────────────────── */
 
 .top-links {
   list-style: none;
@@ -59,6 +63,8 @@ body {
   text-decoration-color: var(--black);
 }
 
+/* ─── NAV SECTIONS ──────────────────────────────────────── */
+
 .nav-section {
   margin-bottom: 0.8rem;
 }
@@ -71,6 +77,8 @@ body {
   line-height: 1.6;
   margin-bottom: 0.1rem;
 }
+
+/* ─── TREE NAV ──────────────────────────────────────────── */
 
 .tree,
 .subtree,
@@ -154,6 +162,8 @@ body {
   display: inline-block;
 }
 
+/* ─── ACTIVE STATE ──────────────────────────────────────── */
+
 .top-links a.active,
 .tree a.active .label,
 .subtree a.active .label,
@@ -168,6 +178,8 @@ body {
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
+
+/* ─── PAGE LAYOUT ───────────────────────────────────────── */
 
 .page-layout {
   display: grid;
@@ -188,6 +200,81 @@ body {
   min-width: 0;        
   max-width: 100%;     
 }
+
+/* ─── ABOUT PAGE ────────────────────────────────────────── */
+
+.about-columns {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--black);
+}
+
+.about-bio {
+  margin-bottom: 1rem;
+}
+
+.about-link {
+  color: var(--black);
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+
+.about-link:hover {
+  text-decoration-color: var(--black);
+}
+
+/* ─── ESSAY PAGE (ON SLIPPING etc.) ────────────────────── */
+
+.essay-container {
+  max-width: 680px;
+}
+
+.essay-title {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.essay-year {
+  font-weight: 500;
+}
+
+.essay-subtitle {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: 1.6rem;
+}
+
+.essay-subtitle-link {
+  color: var(--black);
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+
+.essay-subtitle-link:hover {
+  text-decoration-color: var(--black);
+}
+
+.essay-body p {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+/* ─── CV PAGE ───────────────────────────────────────────── */
 
 .cv-columns {
   display: grid;
@@ -223,6 +310,8 @@ body {
 .cv-entry .role { font-style: normal; }
 .cv-entry .org { font-style: italic; }
 .cv-entry .date { font-style: normal; }
+
+/* ─── CONTACT PAGE ──────────────────────────────────────── */
 
 .contact-container {
   font-family: var(--font-serif);
@@ -268,6 +357,8 @@ body {
 .contact-link:hover {
   text-decoration-color: var(--black);
 }
+
+/* ─── VIDEO ─────────────────────────────────────────────── */
 
 .video-container {
   width: 100%;
@@ -317,19 +408,46 @@ body {
   text-decoration-color: var(--black);
 }
 
+/* ─── MAGAZINE ──────────────────────────────────────────── */
+
 .magazine-container {
   width: 100%;
   max-width: 680px;
 }
+
+/* ─── MOBILE ────────────────────────────────────────────── */
+
 @media (max-width: 767px) {
+  body {
+    padding: 0.9rem;
+  }
+
   .page-layout {
-    grid-template-columns: 1fr; /* Stack columns on mobile */
+    display: block;
   }
+
   .page-nav {
-    padding-right: 0; /* Remove side padding on mobile */
+    padding-right: 0;
+    margin-bottom: 1.5rem;
   }
- .page-content {
-    border-left: none; /* Remove side border on mobile */
+
+  .page-content {
+    border-left: none;
+    border-top: 1px solid #e8e8e8;
     padding-left: 0;
+    padding-top: 1.5rem;
+  }
+
+  .cv-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .essay-container {
+    max-width: 100%;
+  }
+
+  .magazine-container {
+    max-width: 100%;
   }
 }
