@@ -400,3 +400,58 @@ body {
   
   .cv-columns { grid-template-columns: 1fr; gap: 0; }
 }
+/* -------------------------------------------------------------
+   Essay & Literary Page Layout Blocks
+------------------------------------------------------------- */
+.essay-container {
+  width: 100%;
+  max-width: 680px; /* Aligns text with the visual width of your images & videos */
+}
+
+.essay-title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: var(--black);
+  margin-bottom: 0.3rem;
+}
+
+.essay-year {
+  color: #b5b25c; /* Muted warm olive grey for the year accent */
+  font-weight: 400;
+}
+
+.essay-subtitle {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  font-style: italic; /* Universally tilts the entire subtitle block */
+  color: var(--black);
+  margin-bottom: 2rem; /* Creates breathing room before the essay begins */
+}
+
+/* Retains your custom link styling inside the subtitle block */
+.essay-subtitle-link,
+.essay-subtitle-link:link,
+.essay-subtitle-link:visited,
+.essay-subtitle-link:active {
+  color: var(--black) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  -webkit-text-fill-color: var(--black) !important;
+}
+
+.essay-subtitle-link:hover {
+  text-decoration-color: var(--black);
+}
+
+.essay-body p {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 0.88rem; /* Extremely precise editorial body size */
+  line-height: 1.7;   /* Generous line height for immersive reading */
+  color: var(--black);
+  margin-bottom: 1.5rem; /* Consistent gaps between paragraphs */
+}
