@@ -5,11 +5,11 @@
 }
 
 :root {
-  --olive: #C8C466;            /* Your original flawless olive brand color */
-  --active-highlight: #F2F0CE; /* Solid, slightly more saturated milky-olive highlight pill */
+  --olive: #C8C466;            
+  --active-highlight: #F2F0CE; 
   --black: #1a1a1a;
   --white: #ffffff;
-  --font-mono: 'Space Mono', monospace; /* Updated to Space Mono */
+  --font-mono: 'Space Mono', monospace; 
   --font-serif: 'Lora', serif;
 }
 
@@ -26,7 +26,7 @@ body {
   font-family: var(--font-mono);
   font-weight: 700;
   font-size: 1.4rem;
-  letter-spacing: 0.06em; /* Adjusted tracking for Space Mono */
+  letter-spacing: 0.06em; 
   text-transform: uppercase;
   color: var(--olive);
   display: inline-block;
@@ -51,7 +51,7 @@ body {
   color: var(--black);
   text-decoration: underline;
   text-decoration-color: var(--olive);
-  text-decoration-thickness: 1.5px; /* Premium thickened underline */
+  text-decoration-thickness: 1.5px; 
   text-underline-offset: 2px;
 }
 
@@ -129,7 +129,7 @@ body {
 .subsubtree > li > a .label {
   text-decoration: underline;
   text-decoration-color: var(--olive);
-  text-decoration-thickness: 1.5px; /* Premium thickened underline */
+  text-decoration-thickness: 1.5px; 
   text-underline-offset: 2px;
 }
 
@@ -154,7 +154,6 @@ body {
   display: inline-block;
 }
 
-/* Snug active menu highlight — completely prevents structural shifting */
 .top-links a.active,
 .tree a.active .label,
 .subtree a.active .label,
@@ -162,9 +161,9 @@ body {
   color: var(--black);
   text-decoration: none;
   background-color: var(--active-highlight); 
-  display: inline;            /* Stable inline rendering */
-  padding: 0 0.25em;          /* Tighter side padding, zero added height */
-  margin: 0 -0.25em;          /* Neutralizes horizontal layout shifting */
+  display: inline;            
+  padding: 0 0.25em;          
+  margin: 0 -0.25em;          
   border-radius: 1px;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
@@ -305,3 +304,20 @@ body {
 .caption-link:visited,
 .caption-link:active {
   color: #666666 !important;
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  text-decoration-thickness: 1.5px; 
+  text-underline-offset: 2px;
+  -webkit-text-fill-color: #666666 !important; 
+}
+
+.caption-link:hover {
+  color: var(--black) !important;
+  -webkit-text-fill-color: var(--black) !important;
+  text-decoration-color: var(--black);
+}
+
+.magazine-container {
+  width: 100%;
+  max-width: 680px; 
+  box
