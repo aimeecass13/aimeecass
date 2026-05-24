@@ -185,6 +185,8 @@ body {
   width: 100%;
   border-left: 1px solid #e8e8e8;
   padding-left: 1.5rem; 
+  min-width: 0;        /* Hard structural fix for content/image grid blow-out */
+  max-width: 100%;     /* Prevents horizontal scrolling on laptop screens */
 }
 
 /* Wide View CV Layout Columns */
@@ -323,10 +325,61 @@ body {
   text-decoration-color: var(--black);
 }
 
-/* Responsive adjustments for mobile screens */
+/* -------------------------------------------------------------
+   Magazine Page Layout Blocks (Hard-Restricted)
+------------------------------------------------------------- */
+.magazine-container {
+  width: 100%;
+  max-width: 680px; /* Locks the image block to a premium editorial width */
+  box-sizing: border-box;
+}
+
+.magazine-banner {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  font-style: normal; 
+  color: #666666; 
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+.magazine-banner .caption-link,
+.magazine-banner .caption-link:link,
+.magazine-banner .caption-link:visited,
+.magazine-banner .caption-link:active {
+  color: #666666 !important;
+  text-decoration: underline;
+  text-decoration-color: #b5b25c;
+  text-underline-offset: 2px;
+  -webkit-text-fill-color: #666666 !important;
+}
+
+.magazine-banner .caption-link:hover {
+  color: var(--black) !important;
+  -webkit-text-fill-color: var(--black) !important;
+  text-decoration-color: var(--black);
+}
+
+.magazine-image-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden; 
+}
+
+.magazine-photo {
+  display: block;
+  width: 100%;
+  max-width: 100%;  
+  height: auto;     
+}
+
+/* -------------------------------------------------------------
+   Responsive adjustments for mobile screens
+------------------------------------------------------------- */
 @media (max-width: 480px) {
   body { padding: 0.75rem; }
-  .site-name { font-size: 1.4rem; } /* Boosted name presence on vertical mobile layouts */
+  .site-name { font-size: 1.4rem; } /* Confident branding presence on vertical screens */
   
   .page-layout { display: flex; flex-direction: column; gap: 1.5rem; }
   .page-nav { width: 100%; padding-right: 0; }
@@ -340,7 +393,8 @@ body {
     justify-content: center; 
   }
   
-  .video-container {
+  .video-container,
+  .magazine-container {
     width: 100%; 
   }
   
