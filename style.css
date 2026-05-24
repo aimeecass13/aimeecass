@@ -51,7 +51,7 @@ body {
   color: var(--black);
   text-decoration: underline;
   text-decoration-color: var(--olive);
-  text-decoration-thickness: 1.5px; /* Thicker, premium underline */
+  text-decoration-thickness: 1.5px; 
   text-underline-offset: 2px;
 }
 
@@ -129,7 +129,7 @@ body {
 .subsubtree > li > a .label {
   text-decoration: underline;
   text-decoration-color: var(--olive);
-  text-decoration-thickness: 1.5px; /* Thicker, premium underline */
+  text-decoration-thickness: 1.5px; 
   text-underline-offset: 2px;
 }
 
@@ -154,7 +154,6 @@ body {
   display: inline-block;
 }
 
-/* Updated high-contrast solid active menu highlight styles */
 .top-links a.active,
 .tree a.active .label,
 .subtree a.active .label,
@@ -261,7 +260,7 @@ body {
   color: var(--black) !important;
   text-decoration: underline;
   text-decoration-color: var(--olive);
-  text-decoration-thickness: 1.5px; /* Thicker, premium underline */
+  text-decoration-thickness: 1.5px; 
   text-underline-offset: 2px;
   -webkit-text-fill-color: var(--black) !important;
 }
@@ -307,7 +306,7 @@ body {
   color: #666666 !important;
   text-decoration: underline;
   text-decoration-color: var(--olive);
-  text-decoration-thickness: 1.5px; /* Thicker, premium underline */
+  text-decoration-thickness: 1.5px; 
   text-underline-offset: 2px;
   -webkit-text-fill-color: #666666 !important; 
 }
@@ -379,4 +378,101 @@ body {
   flex-direction: column;
 }
 
-.about
+.about-bio {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 0.88rem; 
+  line-height: 1.65;
+  color: var(--black);
+  margin-bottom: 1.5rem; 
+}
+
+.about-link,
+.about-link:link,
+.about-link:visited,
+.about-link:active {
+  color: var(--black) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  text-decoration-thickness: 1.5px; 
+  text-underline-offset: 2px;
+  -webkit-text-fill-color: var(--black) !important;
+}
+
+.about-link:hover {
+  text-decoration-color: var(--black);
+}
+
+/* -------------------------------------------------------------
+   Essay & Literary Page Layout Blocks
+------------------------------------------------------------- */
+.essay-container {
+  width: 100%;
+  max-width: 620px; 
+}
+
+.essay-title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: var(--black);
+  margin-bottom: 0.8rem; 
+}
+
+.essay-year {
+  color: var(--olive); 
+  font-weight: 400;
+}
+
+.essay-subtitle {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  font-style: italic; 
+  color: var(--black);
+  margin-bottom: 2rem; 
+}
+
+.essay-subtitle-link,
+.essay-subtitle-link:link,
+.essay-subtitle-link:visited,
+.essay-subtitle-link:active {
+  color: var(--black) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  text-decoration-thickness: 1.5px; 
+  text-underline-offset: 2px;
+  -webkit-text-fill-color: var(--black) !important;
+}
+
+.essay-subtitle-link:hover {
+  text-decoration-color: var(--black);
+}
+
+.essay-body p {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 0.88rem; 
+  line-height: 1.7;   
+  color: var(--black);
+  margin-bottom: 1.5rem; 
+}
+
+/* -------------------------------------------------------------
+   Responsive adjustments for mobile screens & tablets
+------------------------------------------------------------- */
+@media (max-width: 768px) {
+  body { padding: 1.2rem; }
+  .site-name { font-size: 1.4rem; margin-bottom: 1.5rem; } 
+  
+  .page-layout { display: flex; flex-direction: column; gap: 2.5rem; }
+  .page-nav { width: 100%; padding-right: 0; }
+  
+  .page-content {
+    border-left: none;
+    padding-left: 0;      
+    border-top: 1px solid #e8e8e8;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: flex-start; 
+    width: 100%;
