@@ -18,7 +18,6 @@ body {
   font-family: var(--font-serif);
   font-weight: 500;
   padding: 0.9rem;
-  /* 1. Max-width expanded to 1040px to allow the text columns to stretch wide like Cargo */
   max-width: 1040px; 
 }
 
@@ -121,6 +120,8 @@ body {
   font-size: 0.78rem;
   color: var(--black);
   text-decoration: none;
+  /* Protects longer titles from breaking or wrapping to a new line */
+  white-space: nowrap; 
 }
 
 .tree > li > a .label,
@@ -165,10 +166,9 @@ body {
   -webkit-box-decoration-break: clone;
 }
 
-/* 2. Global Structural Asymmetric Layout */
+/* Global Structural Asymmetric Layout */
 .page-layout {
   display: grid;
-  /* Left menu column is locked to 220px, right content gets all remaining workspace */
   grid-template-columns: 220px 1fr;
   gap: 0;
   align-items: flex-start;
@@ -176,22 +176,19 @@ body {
 
 .page-nav {
   width: 100%;
-  /* Reduced right padding so the layout line shifts closer to the navigation links */
   padding-right: 1.8rem; 
 }
 
 .page-content {
   width: 100%;
   border-left: 1px solid #e8e8e8;
-  /* Massive structural padding to push the text content way further to the right */
   padding-left: 5.5rem; 
 }
 
-/* 3. Wide View CV Multi-Columns */
+/* Wide View CV Multi-Columns */
 .cv-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* Substantially widened the central gutter between CV columns */
   gap: 0 5rem; 
 }
 
@@ -263,4 +260,28 @@ body {
 }
 
 .contact-link {
-  color:
+  color: var(--black);
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.contact-link:hover {
+  text-decoration-color: var(--black);
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 480px) {
+  body { padding: 0.75rem; }
+  .site-name { font-size: 1.1rem; }
+  .page-layout { display: flex; flex-direction: column; gap: 1.5rem; }
+  .page-nav { width: 100%; padding-right: 0; }
+  .page-content {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid #e8e8e8;
+    padding-top: 1.5rem;
+  }
+  .cv-columns { grid-template-columns: 1fr; gap: 0; }
+}
