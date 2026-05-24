@@ -18,6 +18,7 @@ body {
   font-family: var(--font-serif);
   font-weight: 500;
   padding: 0.9rem;
+  /* Max-width expanded to allow the content columns to stretch wide like Cargo */
   max-width: 1040px; 
 }
 
@@ -166,29 +167,34 @@ body {
   -webkit-box-decoration-break: clone;
 }
 
-/* Global Structural Asymmetric Layout */
+/* Tightened Asymmetric Architectural Grid Layout */
 .page-layout {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  /* Left column wraps perfectly tight around the content text, remaining space given to content */
+  grid-template-columns: max-content 1fr;
   gap: 0;
   align-items: flex-start;
 }
 
 .page-nav {
   width: 100%;
+  /* This controls the exact tiny gap between your text links and the line (1.8rem) */
   padding-right: 1.8rem; 
 }
 
 .page-content {
   width: 100%;
+  /* Subtly lightens the border line to a delicate whisper */
   border-left: 1px solid #e8e8e8;
+  /* Generates huge breathing space to push main content rightward away from the line */
   padding-left: 5.5rem; 
 }
 
-/* Wide View CV Multi-Columns */
+/* Wide View CV Layout Columns */
 .cv-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  /* Expands inner space between text data blocks */
   gap: 0 5rem; 
 }
 
@@ -229,7 +235,7 @@ body {
   font-style: normal;
 }
 
-/* Contact Page Specific Layout */
+/* Contact Page Layout Details */
 .contact-container {
   font-family: var(--font-serif);
   font-size: 0.78rem;
