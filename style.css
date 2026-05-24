@@ -18,7 +18,8 @@ body {
   font-family: var(--font-serif);
   font-weight: 500;
   padding: 0.9rem;
-  max-width: 800px;
+  /* 1. Max-width expanded to 1040px to allow the text columns to stretch wide like Cargo */
+  max-width: 1040px; 
 }
 
 .site-name {
@@ -164,31 +165,34 @@ body {
   -webkit-box-decoration-break: clone;
 }
 
-/* CV and general page two-column layout */
+/* 2. Global Structural Asymmetric Layout */
 .page-layout {
-  display: flex;
+  display: grid;
+  /* Left menu column is locked to 220px, right content gets all remaining workspace */
+  grid-template-columns: 220px 1fr;
   gap: 0;
   align-items: flex-start;
 }
 
 .page-nav {
-  flex: 0 0 auto;
-  width: 240px;
-  padding-right: 4.5rem;
+  width: 100%;
+  /* Reduced right padding so the layout line shifts closer to the navigation links */
+  padding-right: 1.8rem; 
 }
 
 .page-content {
-  flex: 1 1 0;
-  min-width: 0;
+  width: 100%;
   border-left: 1px solid #e8e8e8;
-  padding-left: 4.5rem;
+  /* Massive structural padding to push the text content way further to the right */
+  padding-left: 5.5rem; 
 }
 
-/* CV content */
+/* 3. Wide View CV Multi-Columns */
 .cv-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0 4.5rem;
+  /* Substantially widened the central gutter between CV columns */
+  gap: 0 5rem; 
 }
 
 .cv-section {
@@ -228,7 +232,7 @@ body {
   font-style: normal;
 }
 
-/* Contact Page Specific Layout (Cargo Vibe) */
+/* Contact Page Specific Layout */
 .contact-container {
   font-family: var(--font-serif);
   font-size: 0.78rem;
@@ -248,7 +252,6 @@ body {
   margin-bottom: 0.4rem;
 }
 
-/* Forces SVGs to render exactly at text-size bounds */
 .contact-icon {
   width: 14px !important;
   height: 14px !important;
@@ -260,28 +263,4 @@ body {
 }
 
 .contact-link {
-  color: var(--black);
-  text-decoration: underline;
-  text-decoration-color: var(--olive);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-}
-
-.contact-link:hover {
-  text-decoration-color: var(--black);
-}
-
-/* Responsive adjustments for mobile screens */
-@media (max-width: 480px) {
-  body { padding: 0.75rem; }
-  .site-name { font-size: 1.1rem; }
-  .page-layout { flex-direction: column; gap: 1.5rem; }
-  .page-nav { width: 100%; }
-  .page-content {
-    border-left: none;
-    padding-left: 0;
-    border-top: 1px solid #d0d0d0;
-    padding-top: 1.5rem;
-  }
-  .cv-columns { grid-template-columns: 1fr; }
-}
+  color:
