@@ -47,7 +47,7 @@
       max-width: 680px;
     }
 
-    /* Fixed 4-Column Track Mapping Layout */
+    /* Precision 4-Column Track Mapping Layout */
     .calderas-image-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr); /* 4 even layout tracks */
@@ -56,31 +56,31 @@
       align-items: start;
     }
 
-    /* Image 2: Spans 3 columns width on Row 1 (leaving column 4 empty) */
+    /* Row 1: Spans 3 columns width on the left (leaving column 4 empty) */
     .calderas-img-2 {
       grid-column: 1 / span 3;
       grid-row: 1;
     }
 
-    /* Image 3: Sits in Column Lane 2 on Row 2 (leaving lane 1 under image 2 beautifully empty) */
+    /* Row 2 (Left): Sits in Column 2 (leaving Column 1 under image 2 empty) */
     .calderas-img-3 {
       grid-column: 2 / span 1;
       grid-row: 2;
       margin-top: 4px;
     }
 
-    /* Image 4: Starts at Column Lane 3 on Row 2, spanning 2 columns out to the right margin */
+    /* Row 2 & 3 (Right): Starts at Column 3 and spans 2 columns to the right margin */
     .calderas-img-4 {
       grid-column: 3 / span 2;
-      grid-row: 2;
+      grid-row: 2 / span 2; /* Spans downward so it frames the right wall */
       margin-top: 4px;
     }
 
-    /* Image 5: Sits directly on the floor row starting at Column Lane 1, spanning 2 columns width */
+    /* Row 3 (Left): Sits directly under image 3, spanning Columns 1 and 2 */
     .calderas-img-5 {
       grid-column: 1 / span 2;
       grid-row: 3;
-      margin-top: 16px;
+      margin-top: 4px; /* Matches the tighter grid spacing */
     }
 
     .calderas-grid-img {
