@@ -190,13 +190,13 @@ body {
 
 .page-nav {
   width: 100%;
-  padding-right: 7.5rem;
+  padding-right: 5.5rem;
 }
 
 .page-content {
   width: 100%;
   border-left: 1px solid #e8e8e8;
-  padding-left: 1.5rem;
+  padding-left: 3.5rem;
   min-width: 0;
   max-width: 100%;
 }
