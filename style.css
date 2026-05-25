@@ -383,6 +383,7 @@ body {
 
 .video-container {
   width: 100%;
+  max-width: 680px; /* FIXED: Constraints video width to perfectly match essays and magazines */
   display: flex;
   flex-direction: column;
 }
