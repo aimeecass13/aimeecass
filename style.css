@@ -442,9 +442,10 @@ body {
   font-family: var(--font-serif);
   font-size: 0.78rem;
   font-weight: 500;
-  color: #666666;
   line-height: 1.6;
   margin-bottom: 0.8rem;
+  font-style: italic; /* Keeps it italicized as requested */
+  /* REMOVED: color: #666666; - It will now naturally follow your standard body black rule */
 }
 
 .magazine-banner .caption-link,
