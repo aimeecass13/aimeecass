@@ -11,12 +11,23 @@
   <link rel="stylesheet" href="../style.css" />
   
   <style>
-    .calderas-text-grid {
+   .calderas-text-grid {
       display: grid;
       grid-template-columns: 1fr 3fr;
       gap: 2rem;
       margin-top: 1.5rem;
-      margin-bottom: 2.5rem;
+      margin-bottom: 1.5rem; /* Locks down the space below the text */
+      max-width: 680px;
+    }
+
+    .calderas-detail-caption {
+      font-family: var(--font-serif);
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #666666;
+      line-height: 1.5;
+      margin-top: 0;          /* Erases extra browser top-padding */
+      margin-bottom: 0.5rem; /* Tighter gap so the grid snaps closer up */
       max-width: 680px;
     }
     .calderas-label {
