@@ -190,13 +190,15 @@ body {
 
 .page-nav {
   width: 100%;
-  padding-right: 2rem; /* CHANGED: Shrunk from 7.5rem to push the layout box right */
+  /* CHANGED: Increased from 7.5rem to give a wider space before the line */
+  padding-right: 9.5rem; 
 }
 
 .page-content {
   width: 100%;
   border-left: 1px solid #e8e8e8;
-  padding-left: 2rem; /* CHANGED: Shrunk from 3.5rem so the line sits right against your text */
+  /* CHANGED: Reduced from 3.5rem so the line "hugs" your essay/page content tightly */
+  padding-left: 1.5rem; 
   min-width: 0;
   max-width: 100%;
 }
@@ -243,12 +245,12 @@ body {
 /* ─── ESSAY PAGE ────────────────────────────────────────── */
 
 .essay-container {
-  max-width: 680px;
+  max-width: 440px;
 }
 
 .essay-title {
   font-family: var(--font-serif);
-  font-size: 1.0rem; /* CHANGED: Sized up to match the reference screenshot */
+  font-size: 0.8rem; /* CHANGED: Sized up to match the reference screenshot */
   font-weight: 500;
   color: var(--black);
   margin-bottom: 0.5rem;
