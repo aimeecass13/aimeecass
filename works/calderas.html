@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=IBM+Plex+Mono:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../style.css" />
   
-  <style>
+ <style>
     .calderas-text-grid {
       display: grid;
       grid-template-columns: 1fr 3fr;
@@ -53,9 +53,25 @@
       max-width: 680px;
       align-items: start;
     }
-    .grid-span-3 { grid-column: span 3; }
-    .grid-span-2 { grid-column: span 2; }
-    .grid-span-1 { grid-column: span 1; }
+
+    /* Strict positional parameters for your assets */
+    .calderas-img-2 { 
+      grid-column: 1 / span 3; 
+      grid-row: 1; 
+    }
+    .calderas-img-3 { 
+      grid-column: 1 / span 1; 
+      grid-row: 2; 
+    }
+    .calderas-img-4 { 
+      grid-column: 2 / span 2; 
+      grid-row: 2; 
+    }
+    .calderas-img-5 { 
+      grid-column: 1 / span 2; 
+      grid-row: 3; 
+    }
+
     .calderas-grid-img {
       width: 100%;
       height: auto;
@@ -154,22 +170,24 @@
           <em>Calderas</em>, detail (series of 6)
         </div>
 
-        <div class="calderas-image-grid">
+       <div class="calderas-image-grid">
           
-          <div class="grid-span-3">
+          <div class="calderas-img-2">
             <img src="calderas2.jpg" alt="Calderas detail view 2" class="calderas-grid-img" />
           </div>
           
-          <div class="grid-span-1">
+          <div class="calderas-img-3">
             <img src="calderas3.jpg" alt="Calderas detail view 3" class="calderas-grid-img" />
           </div>
-          <div class="grid-span-2">
+          <div class="calderas-img-4">
             <img src="calderas4.jpg" alt="Calderas detail view 4" class="calderas-grid-img" />
           </div>
           
-          <div class="grid-span-2">
+          <div class="calderas-img-5">
             <img src="calderas5.jpg" alt="Calderas detail view 5" class="calderas-grid-img" />
           </div>
+
+        </div>
 
         </div>
 
