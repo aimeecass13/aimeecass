@@ -45,7 +45,7 @@ body {
 }
 
 .top-links li {
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .top-links a {
@@ -220,8 +220,8 @@ body {
 .about-bio {
   font-family: var(--font-serif);
   font-weight: 500;
-  font-size: 0.78rem;
-  line-height: 1.65;
+  font-size: 0.75rem;
+  line-height: 1.5;
   color: var(--black);
   margin-bottom: 1rem;
 }
@@ -290,7 +290,7 @@ body {
   font-family: var(--font-serif);
   font-size: 0.78rem;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.5;
   color: var(--black);
   margin-bottom: 1rem;
 }
@@ -324,7 +324,7 @@ body {
   font-family: var(--font-serif);
   font-size: 0.78rem;
   font-weight: 500;
-  line-height: 1.55;
+  line-height: 1.5;
   color: var(--black);
 }
 
@@ -338,7 +338,7 @@ body {
   font-family: var(--font-serif);
   font-size: 0.78rem;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .contact-intro {
@@ -409,7 +409,7 @@ body {
   font-size: 0.7rem;
   font-weight: 500;
   color: #666666;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .caption-link,
@@ -442,7 +442,7 @@ body {
   font-family: var(--font-serif);
   font-size: 0.78rem;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.5;
   margin-bottom: 0.8rem;
   font-style: italic; /* Keeps it italicized as requested */
   /* REMOVED: color: #666666; - It will now naturally follow your standard body black rule */
