@@ -190,13 +190,13 @@ body {
 
 .page-nav {
   width: 100%;
-  padding-right: 7.5rem; /* Keeps your original tree column boundaries stable */
+  padding-right: 2rem; /* CHANGED: Shrunk from 7.5rem to push the layout box right */
 }
 
 .page-content {
   width: 100%;
   border-left: 1px solid #e8e8e8;
-  padding-left: 1.5rem; /* CHANGED: Shrunk to let the vertical border "hug" the text */
+  padding-left: 2rem; /* CHANGED: Shrunk from 3.5rem so the line sits right against your text */
   min-width: 0;
   max-width: 100%;
 }
@@ -248,7 +248,7 @@ body {
 
 .essay-title {
   font-family: var(--font-serif);
-  font-size: 1.45rem; /* CHANGED: Sized up to match reference image context elegantly */
+  font-size: 1.0rem; /* CHANGED: Sized up to match the reference screenshot */
   font-weight: 500;
   color: var(--black);
   margin-bottom: 0.5rem;
@@ -256,7 +256,7 @@ body {
 
 .essay-year {
   font-weight: 500;
-  color: var(--olive); /* CHANGED: Added accent color to your year element */
+  color: var(--olive); /* CHANGED: Set to your global olive accent color */
 }
 
 .essay-subtitle {
@@ -264,8 +264,8 @@ body {
   font-size: 0.78rem;
   font-weight: 500;
   color: var(--black);
-  margin-bottom: 2rem; /* CHANGED: Expanded spacing between subtitle and first body paragraph */
-  font-style: italic; /* CHANGED: Made bracketed line italicized to match reference image */
+  margin-bottom: 2.5rem; /* CHANGED: Added breathing room before the body paragraphs */
+  font-style: italic; /* CHANGED: Forced the bracketed line into italics */
 }
 
 .essay-subtitle-link,
@@ -397,3 +397,118 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-caption {
+  font-family: var(--font-serif);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #666666;
+  line-height: 1.4;
+}
+
+.caption-link,
+.caption-link:link,
+.caption-link:visited,
+.caption-link:active {
+  color: #666666 !important;
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+  -webkit-text-fill-color: #666666 !important;
+}
+
+.caption-link:hover {
+  color: var(--black) !important;
+  -webkit-text-fill-color: var(--black) !important;
+  text-decoration-color: var(--black);
+}
+
+/* ─── MAGAZINE ──────────────────────────────────────────── */
+
+.magazine-container {
+  width: 100%;
+  max-width: 680px;
+  box-sizing: border-box;
+}
+
+.magazine-banner {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+.magazine-banner .caption-link,
+.magazine-banner .caption-link:link,
+.magazine-banner .caption-link:visited,
+.magazine-banner .caption-link:active {
+  color: #666666 !important;
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+  -webkit-text-fill-color: #666666 !important;
+}
+
+.magazine-banner .caption-link:hover {
+  color: var(--black) !important;
+  -webkit-text-fill-color: var(--black) !important;
+  text-decoration-color: var(--black);
+}
+
+.magazine-image-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.magazine-photo {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ─── MOBILE ────────────────────────────────────────────── */
+
+@media (max-width: 767px) {
+  .page-layout {
+    display: block;
+  }
+
+  .page-nav {
+    padding-right: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .page-content {
+    border-left: none;
+    border-top: 1px solid #e8e8e8;
+    padding-left: 0;
+    padding-top: 1.5rem;
+  }
+
+  .about-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .cv-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .essay-container {
+    max-width: 100%;
+  }
+
+  .magazine-container {
+    max-width: 100%;
+  }
+}
