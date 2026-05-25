@@ -54,21 +54,29 @@
       align-items: start;
     }
 
-    /* Strict positional parameters for your assets */
+    .calderas-image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Changed to 3 equal main tracks */
+      gap: 12px;
+      max-width: 680px;
+      align-items: start;
+    }
+
+    /* Shifted coordinates to span across the 3-track system */
     .calderas-img-2 { 
-      grid-column: 1 / span 3; 
+      grid-column: 1 / span 3; /* Spans full width across row 1 */
       grid-row: 1; 
     }
     .calderas-img-3 { 
-      grid-column: 1 / span 1; 
+      grid-column: 1 / span 1; /* Takes left 1/3 of row 2 */
       grid-row: 2; 
     }
     .calderas-img-4 { 
-      grid-column: 2 / span 2; 
+      grid-column: 2 / span 2; /* Takes right 2/3 of row 2 */
       grid-row: 2; 
     }
     .calderas-img-5 { 
-      grid-column: 1 / span 2; 
+      grid-column: 1 / span 2; /* Takes left 2/3 of row 3 */
       grid-row: 3; 
     }
 
@@ -170,7 +178,7 @@
           <em>Calderas</em>, detail (series of 6)
         </div>
 
-       <div class="calderas-image-grid">
+      <div class="calderas-image-grid">
           
           <div class="calderas-img-2">
             <img src="calderas2.jpg" alt="Calderas detail view 2" class="calderas-grid-img" />
@@ -186,6 +194,8 @@
           <div class="calderas-img-5">
             <img src="calderas5.jpg" alt="Calderas detail view 5" class="calderas-grid-img" />
           </div>
+
+        </div>
 
         </div>
 
