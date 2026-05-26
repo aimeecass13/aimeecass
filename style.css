@@ -523,3 +523,13 @@ body {
       color: #555555;                           /* Softens the black to a dark charcoal */
       margin-bottom: 1.8rem;
     }
+/* Sticks the left navigation sidebar during scroll on desktop views */
+@media (min-width: 769px) {
+  .page-nav {
+    position: -webkit-sticky; /* Support for Safari browsers */
+    position: sticky;
+    top: 2rem;                /* Keeps a comfortable 2-rem buffer from the top of the browser screen */
+    align-self: start;        /* Crucial: Prevents the sidebar container from stretching awkwardly */
+    height: max-content;      /* Ensures the container wraps tightly around your menu tree link content */
+  }
+}
