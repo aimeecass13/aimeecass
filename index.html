@@ -1,80 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aimee Cass</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=IBM+Plex+Mono:wght@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=IBM+Plex+Mono:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  
+  <style>
+    /* Mimics your about page column layout behavior perfectly */
+    .about-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    /* Sets up the media column structure for your photography image */
+    .about-media-col {
+      display: flex !important;
+      align-items: flex-start; 
+      height: auto !important;
+      background: none !important;
+    }
+
+    /* Fits the photography image perfectly to the exact column width */
+    .home-photography-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Your exact uppercase monospace headline statement */
+    .about-lead-mono {
+      font-family: var(--font-mono), monospace; 
+      font-size: 0.75rem;                       
+      text-transform: uppercase;                
+      letter-spacing: 0.05em;                   
+      color: #555555;                           
+      margin-bottom: 1.8rem;
+    }
+
+    /* Handles mobile collapse smoothly just like your about layout */
+    @media (max-width: 768px) {
+      .about-columns {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <div class="site-name">Aimee Cass</div>
+  <div class="page-layout">
 
-  <nav>
-    <ul class="top-links">
-      <li><a href="about.html">About</a></li>
-      <li><a href="cv.html">CV</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <div class="page-nav">
+      <a class="site-name" href="./">Aimee Cass</a>
 
-    <div class="nav-section">
-      <div class="nav-section-title">Writing</div>
-      <ul class="tree">
-        <li>
-          <span>Professional</span>
-          <ul class="subtree">
-            <li><a href="writing/conversation-design.html"><span class="chevron">›</span> <span class="label">Conversation Design</span></a></li>
-            <li><a href="writing/copy-content.html"><span class="chevron">›</span> <span class="label">Copy &amp; Content</span></a></li>
-            <li><a href="writing/script.html"><span class="chevron">›</span> <span class="label">Script</span></a></li>
-          </ul>
-        </li>
-        <li>
-          <span>Literary</span>
-          <ul class="subtree">
+      <nav>
+        <ul class="top-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-section">
+          <div class="nav-section-title">Writing</div>
+          <ul class="tree">
             <li>
-              <span>Editorial</span>
-              <ul class="subsubtree">
-                <li><a href="writing/no-art-speak.html"><span class="chevron">›</span> <span class="label">No Art Speak Magazine</span></a></li>
+              <span>Professional</span>
+              <ul class="subtree">
+                <li><a href="writing/conversation-design.html"><span class="chevron">›</span> <span class="label">Conversation Design</span></a></li>
+                <li><a href="writing/copy-content.html"><span class="chevron">›</span> <span class="label">Copy &amp; Content</span></a></li>
+                <li><a href="writing/script.html"><span class="chevron">›</span> <span class="label">Script</span></a></li>
               </ul>
             </li>
             <li>
-              <span>Essays</span>
-              <ul class="subsubtree">
-                <li><a href="writing/on-slipping.html"><span class="chevron">›</span> <span class="label">On Slipping</span></a></li>
-              </ul>
-            </li>
-            <li>
-              <span>Fiction &amp; Poetry</span>
-              <ul class="subsubtree">
-                <li><a href="writing/island.html"><span class="chevron">›</span> <span class="label">Island</span></a></li>
-                <li><a href="writing/la-nina.html"><span class="chevron">›</span> <span class="label">La Niña</span></a></li>
+              <span>Literary</span>
+              <ul class="subtree">
+                <li>
+                  <span>Editorial</span>
+                  <ul class="subsubtree">
+                    <li><a href="writing/no-art-speak.html"><span class="chevron">›</span> <span class="label">No Art Speak Magazine</span></a></li>
+                  </ul>
+                </li>
+                <li>
+                  <span>Essay</span>
+                  <ul class="subsubtree">
+                    <li><a href="writing/on-slipping.html"><span class="chevron">›</span> <span class="label">On Slipping</span></a></li>
+                  </ul>
+                </li>
+                <li>
+                  <span>Fiction &amp; Poetry</span>
+                  <ul class="subsubtree">
+                    <li><a href="writing/island.html"><span class="chevron">›</span> <span class="label">Island</span></a></li>
+                    <li><a href="writing/la-nina.html"><span class="chevron">›</span> <span class="label">La Niña</span></a></li>
+                  </ul>
+                </li>
               </ul>
             </li>
           </ul>
-        </li>
-      </ul>
-    </div>
+        </div>
 
-    <div class="nav-section">
-      <div class="nav-section-title">Works</div>
-      <ul class="tree">
-        <li>
-          <span>Hot Glass</span>
-          <ul class="subtree">
-            <li><a href="works/soup.html"><span class="chevron">›</span> <span class="label">SOUP</span></a></li>
-            <li><a href="works/calderas.html"><span class="chevron">›</span> <span class="label">Calderas</span></a></li>
-            <li><a href="works/ios-vases.html"><span class="chevron">›</span> <span class="label">Io's Vases</span></a></li>
-          </ul>
-        </li>
-        <li><a href="works/photography.html"><span class="chevron">›</span> <span class="label">Photography</span></a></li>
-        <li><a href="works/painting-drawing.html"><span class="chevron">›</span> <span class="label">Painting &amp; Drawing</span></a></li>
-      </ul>
-    </div>
-  </nav>
-
-</body>
-</html>
+        <div class="nav-section">
+          <div class="nav
