@@ -11,18 +11,19 @@
   <link rel="stylesheet" href="/style.css" />
   
   <style>
-    /* Matches the exact width behavior of your about text column */
-    .home-content-col {
-      max-width: 100%;
-      height: auto;
+    /* Preserves your identical two-column structure from the about page */
+    .about-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
     }
 
-    /* Fits the photography image perfectly to the text column width */
+    /* Constrains the photograph to match the exact width of the text column */
     .home-photography-image {
       width: 100%;
       height: auto;
       display: block;
-      margin-top: 2rem; /* Comfortable breathing room between the text and the photo */
+      margin-top: 1.8rem; /* Seamless spacing matching your paragraph flow margins */
     }
 
     /* Your exact uppercase monospace headline statement */
@@ -33,6 +34,14 @@
       letter-spacing: 0.05em;                   
       color: #555555;                           
       margin: 0;
+    }
+
+    /* Handles mobile collapse cleanly just like your main layout configurations */
+    @media (max-width: 768px) {
+      .about-columns {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
     }
   </style>
 </head>
@@ -107,13 +116,17 @@
     </div>
 
     <div class="page-content">
-      <div class="home-content-col">
+      <div class="about-columns">
         
-        <p class="about-lead-mono">
-          Writer, editor and artist based between Australia and the UK.
-        </p>
+        <div class="about-text-col">
+          <p class="about-lead-mono">
+            Writer, editor and artist based between Australia and the UK.
+          </p>
+          
+          <img src="indexpic.jpg" alt="Aimee Cass Photography" class="home-photography-image" />
+        </div>
 
-        <img src="indexpic.jpg" alt="Aimee Cass Photography" class="home-photography-image" />
+        <div class="about-media-col"></div>
 
       </div>
     </div>
