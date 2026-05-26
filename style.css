@@ -516,3 +516,9 @@ body {
     max-width: 100%;
   }
 }
+.about-lead {
+      font-size: 0.95rem;      /* Noticeably larger than standard body copy */
+      line-height: 1.4;        /* Slightly tighter tracking for larger type */
+      color: var(--black);     /* Keeps it sharp and readable */
+      margin-bottom: 1.5rem;   /* Pushes the next paragraph down elegantly */
+    }
