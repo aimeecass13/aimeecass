@@ -478,10 +478,9 @@ body {
   max-width: 100%;
   height: auto;
 }
-
 /* ─── MOBILE ────────────────────────────────────────────── */
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .page-layout {
     display: block;
   }
@@ -515,21 +514,31 @@ body {
   .magazine-container {
     max-width: 100%;
   }
-.about-lead-mono {
-      font-family: var(--font-mono), monospace; /* Swaps it to your sharp font */
-      font-size: 0.75rem;                       /* Keeps it small and precise */
-      text-transform: uppercase;                /* Optional: makes it ALL CAPS */
-      letter-spacing: 0.05em;                   /* Adds slight breathing room */
-      color: #555555;                           /* Softens the black to a dark charcoal */
-      margin-bottom: 1.8rem;
-    }
-/* Sticks the left navigation sidebar during scroll on desktop views */
+
+  .about-lead-mono {
+    font-family: var(--font-mono), monospace; 
+    font-size: 0.75rem;                       
+    text-transform: uppercase;                
+    letter-spacing: 0.05em;                   
+    color: #555555;                           
+    margin-bottom: 1.8rem;
+  }
+} /* <── FIXED: Closed the mobile block correctly here */
+
+/* ─── DESKTOP STICKY SIDEBAR ────────────────────────────── */
+
 @media (min-width: 769px) {
+  /* Forces the main container grid framework to allow layout flow scrolling */
+  .page-layout {
+    overflow: visible !important;
+  }
+
+  /* Anchors the menu sidebar smoothly to the view screen */
   .page-nav {
-    position: -webkit-sticky; /* Support for Safari browsers */
-    position: sticky;
-    top: 2rem;                /* Keeps a comfortable 2-rem buffer from the top of the browser screen */
-    align-self: start;        /* Crucial: Prevents the sidebar container from stretching awkwardly */
-    height: max-content;      /* Ensures the container wraps tightly around your menu tree link content */
+    position: -webkit-sticky !important; /* Safari compatibility */
+    position: sticky !important;
+    top: 2rem !important;                /* Gap margin from the top window view edge */
+    align-self: start !important;        /* Prevents the sidebar box from matching the text block height */
+    height: max-content !important;      /* Wraps structural margins tightly around your tree link data */
   }
 }
