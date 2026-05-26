@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painting &amp; Drawing — Aimee Cass</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=IBM+Plex+Mono:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  
+  <style>
+    /* Styling for the page header to match your other sections */
+    .works-header {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--black);
+      margin-bottom: 2rem;
+    }
+
+    /* Creates the 3-column structural layout grid for the artwork */
+    .painting-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem; /* Comfortable spacing between columns and rows */
+      width: 100%;
+      align-items: start;
+    }
+
+    /* Global image utility rule to keep scaling smooth and proportional */
+    .painting-grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Layout Placement Classes */
+    
+    .span-full {
+      grid-column: span 3;
+    }
+
+    .center-col {
+      grid-column: 2 / span 1; /* Explicitly forces the image into the 2nd column slot */
+    }
+
+    .right-col {
+      grid-column: 3 / span 1; /* Explicitly forces the image into the 3rd column slot */
+    }
+
+    .left-col {
+      grid-column: 1 / span 1; /* Explicitly forces the image into the 1st column slot */
+    }
+
+    /* Handles neat single-column stacking layout on mobile screens */
+    @media (max-width: 768px) {
+      .painting-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .span-full, .center-col, .right-col, .left-col {
+        grid-column: span 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-layout">
+
+    <div class="page-nav">
+      <a class="site-name" href="../">Aimee Cass</a>
+
+      <nav>
+        <ul class="top-links">
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../cv.html">CV</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-section">
+          <div class="nav-section-title">Writing</div>
+          <ul class="tree">
+            <li>
+              <span>Professional</span>
+              <ul class="subtree">
+                <li><a href="../writing/conversation-design.html"><span class="chevron">›</span> <span class="label">Conversation Design</span></a></li>
+                <li><a href="../writing/copy-content.html"><span class="chevron">›</span> <span class="label">Copy &amp; Content</span></a></li>
+                <li><a href="../writing/script.html"><span class="chevron">›</span> <span class="label">Script</span></a></li>
+              </ul>
+            </li>
+            <li>
+              <span>Literary</span>
+              <ul class="subtree">
+                <li>
+                  <span>Editorial</span>
+                  <ul class="subsubtree">
+                    <li><a href="../writing/no-art-speak.html"><span class="chevron">›</span> <span class="label">No Art Speak Magazine</span></a></li>
+                  </ul>
+                </li>
+                <li>
+                  <span>Essay</span>
+                  <ul class="subsubtree">
+                    <li><a href="../writing/on-slipping.html"><span class="chevron">›</span> <span class="label">On Slipping</span></a></li>
+                  </ul>
+                </li>
+                <li>
+                  <span>Fiction &amp; Poetry</span>
+                  <ul class="subsubtree">
+                    <li><a href="../writing/island.html"><span class="chevron">›</span> <span class="label">Island</span></a></li>
+                    <li><a href="../writing/la-nina.html"><span class="chevron">›</span> <span class="label">La Niña</span></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-title">Works</div>
+          <ul class="tree">
+            <li>
+              <span>Hot Glass</span>
+              <ul class="subtree">
+                <li><a href="soup.html"><span class="chevron">›</span> <span class="label">SOUP</span></a></li>
+                <li><a href="calderas.html"><span class="chevron">›</span> <span class="label">Calderas</span></a></li>
+                <li><a href="ios-vases.html"><span class="chevron">›</span> <span class="label">Io's Vases</span></a></li>
+              </ul>
+            </li>
+            <li><a href="photography.html"><span class="chevron">›</span> <span class="label">Photography</span></a></li>
+            <li><a href="painting-drawing.html" class="active"><span class="chevron">›</span> <span class="label">Painting &amp; Drawing</span></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="page-content">
+      
+      <h1 class="works-header">Selected Works</h1>
+
+      <div class="painting-grid">
+        
+        <div class="span-full">
+          <img src="../images/lanina.jpg" alt="La Niña" />
+        </div>
+
+        <div class="center-col">
+          <img src="../images/sun.jpg" alt="Sun" />
+        </div>
+        <div class="right-col">
+          <img src="../images/dad.jpg" alt="Dad" />
+        </div>
+
+        <div class="span-full">
+          <img src="../images/nets.jpg" alt="Nets" />
+        </div>
+
+        <div class="left-col">
+          <img src="../images/nets3.jpg" alt="Nets 3" />
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
