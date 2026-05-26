@@ -11,25 +11,18 @@
   <link rel="stylesheet" href="/style.css" />
   
   <style>
-    /* Mimics your about page column layout behavior perfectly */
-    .about-columns {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
+    /* Matches the exact width behavior of your about text column */
+    .home-content-col {
+      max-width: 100%;
+      height: auto;
     }
 
-    /* Sets up the media column structure for your photography image */
-    .about-media-col {
-      display: block !important;
-      height: auto !important;
-      background: none !important;
-    }
-
-    /* Fits the photography image perfectly to the exact column width */
+    /* Fits the photography image perfectly to the text column width */
     .home-photography-image {
       width: 100%;
       height: auto;
       display: block;
+      margin-top: 2rem; /* Comfortable breathing room between the text and the photo */
     }
 
     /* Your exact uppercase monospace headline statement */
@@ -39,15 +32,7 @@
       text-transform: uppercase;                
       letter-spacing: 0.05em;                   
       color: #555555;                           
-      margin-bottom: 1.8rem;
-    }
-
-    /* Handles mobile collapse smoothly just like your about layout */
-    @media (max-width: 768px) {
-      .about-columns {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
+      margin: 0;
     }
   </style>
 </head>
@@ -122,17 +107,13 @@
     </div>
 
     <div class="page-content">
-      <div class="about-columns">
+      <div class="home-content-col">
         
-        <div class="about-text-col">
-          <p class="about-lead-mono">
-            Writer, editor and artist based between Australia and the UK.
-          </p>
-        </div>
+        <p class="about-lead-mono">
+          Writer, editor and artist based between Australia and the UK.
+        </p>
 
-        <div class="about-media-col">
-          <img src="indexpic.jpg" alt="Aimee Cass Photography" class="home-photography-image" />
-        </div>
+        <img src="indexpic.jpg" alt="Aimee Cass Photography" class="home-photography-image" />
 
       </div>
     </div>
