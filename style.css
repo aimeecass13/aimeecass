@@ -515,10 +515,11 @@ body {
   .magazine-container {
     max-width: 100%;
   }
-}
-.about-lead {
-      font-size: 0.95rem;      /* Noticeably larger than standard body copy */
-      line-height: 1.4;        /* Slightly tighter tracking for larger type */
-      color: var(--black);     /* Keeps it sharp and readable */
-      margin-bottom: 1.5rem;   /* Pushes the next paragraph down elegantly */
+.about-lead-mono {
+      font-family: var(--font-mono), monospace; /* Swaps it to your sharp font */
+      font-size: 0.75rem;                       /* Keeps it small and precise */
+      text-transform: uppercase;                /* Optional: makes it ALL CAPS */
+      letter-spacing: 0.05em;                   /* Adds slight breathing room */
+      color: #555555;                           /* Softens the black to a dark charcoal */
+      margin-bottom: 1.8rem;
     }
