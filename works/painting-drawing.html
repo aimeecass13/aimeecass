@@ -16,68 +16,65 @@
       font-size: 1rem;
       font-weight: 500;
       color: var(--black);
-      margin-bottom: 1rem; /* REDUCED: Changed from 2rem to match your other works pages */
+      margin-bottom: 1rem;
     }
 
-    /* Creates the 3-column structural layout grid for the artwork */
+    /* CHANGED: Reconfigured grid setup to use 4 columns instead of 3 */
     .painting-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 2rem; 
       width: 100%;
-      max-width: 680px; /* FIXED: Caps the total width to perfectly match your other works pages */
+      max-width: 680px; 
       align-items: start;
     }
 
-    /* Global image utility rule to keep scaling smooth and proportional */
     .painting-grid img {
       width: 100%;
       height: auto;
       display: block;
     }
-    /* Ensures the figure wrapper acts as a clean structural block in the grid */
+
     .artwork-item {
       margin: 0;
       display: flex;
       flex-direction: column;
     }
 
-    /* Formats the text to sit tightly beneath the image, left-justified */
     .artwork-caption {
       font-family: var(--font-serif);
       font-size: 0.7rem;
       color: #666666;
-      margin-top: 0.35rem; /* Keeps the caption hugging closely to the image */
+      margin-top: 0.35rem; 
       line-height: 1.3;
       text-align: left;
     }
 
-    /* Layout Placement Classes */
+    /* ─── CHANGED: GRID PLACEMENT SIZING CLASSES ─── */
     
-    .span-full {
-      grid-column: span 3;
+    /* Spans full width across all 4 grid units */
+    .span-4 {
+      grid-column: span 4;
     }
 
-    .center-col {
-      grid-column: 2 / span 1; /* Explicitly forces the image into the 2nd column slot */
+    /* Spans 2 grid units cleanly */
+    .span-2 {
+      grid-column: span 2;
     }
 
-    .right-col {
-      grid-column: 3 / span 1; /* Explicitly forces the image into the 3rd column slot */
+    /* Starts on the second column line and spans the 3 remaining columns to the far right */
+    .right-3 {
+      grid-column: 2 / span 3;
     }
 
-    .left-col {
-      grid-column: 1 / span 2; /* FIXED: Now spans across the first two columns instead of just one */
-    }
-
-    /* Handles neat single-column stacking layout on mobile screens */
     @media (max-width: 768px) {
       .painting-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
       }
       
-      .span-full, .center-col, .right-col, .left-col {
+      /* CHANGED: Overrides 4-column sizing layout cleanly on mobile views */
+      .span-4, .span-2, .right-3 {
         grid-column: span 1 !important;
       }
     }
@@ -157,36 +154,33 @@
    
       <div class="painting-grid">
         
-        <figure class="artwork-item span-full">
+        <figure class="artwork-item span-4">
           <img src="lanina.jpg" alt="La Niña" />
           <figcaption class="artwork-caption"><em>La Niña</em>, digital painting</figcaption>
         </figure>
 
-        <figure class="artwork-item center-col">
+        <figure class="artwork-item span-2">
           <img src="sun.jpg" alt="Sun" />
           <figcaption class="artwork-caption"><em>Sun</em>, ink on paper w digital manipulation</figcaption>
         </figure>
 
-        <figure class="artwork-item right-col">
+        <figure class="artwork-item span-2">
           <img src="dad.jpg" alt="Dad" />
           <figcaption class="artwork-caption"><em>Dad</em>, ink on paper w digital manipulation</figcaption>
         </figure>
 
-        <figure class="artwork-item span-full">
+        <figure class="artwork-item span-4">
           <img src="nets.jpg" alt="Nest" />
           <figcaption class="artwork-caption"><em>Nest</em>, digital drawing</figcaption>
         </figure>
 
-        <figure class="artwork-item left-col">
+        <figure class="artwork-item right-3">
           <img src="nets3.jpg" alt="Nest Detail" />
           <figcaption class="artwork-caption"><em>Nest</em> (detail), digital drawing</figcaption>
         </figure>
 
       </div>
 
-      </div>
-
-      </div>
     </div>
 
   </div>
