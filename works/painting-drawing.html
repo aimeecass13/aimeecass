@@ -34,6 +34,22 @@
       height: auto;
       display: block;
     }
+    /* Ensures the figure wrapper acts as a clean structural block in the grid */
+    .artwork-item {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Formats the text to sit tightly beneath the image, left-justified */
+    .artwork-caption {
+      font-family: var(--font-serif);
+      font-size: 0.7rem;
+      color: #666666;
+      margin-top: 0.35rem; /* Keeps the caption hugging closely to the image */
+      line-height: 1.3;
+      text-align: left;
+    }
 
     /* Layout Placement Classes */
     
@@ -142,24 +158,32 @@
 
       <div class="painting-grid">
         
-        <div class="span-full">
+        <figure class="artwork-item span-full">
           <img src="lanina.jpg" alt="La Niña" />
-        </div>
+          <figcaption class="artwork-caption"><em>La Niña</em>, digital painting</figcaption>
+        </figure>
 
-        <div class="center-col">
+        <figure class="artwork-item center-col">
           <img src="sun.jpg" alt="Sun" />
-        </div>
-        <div class="right-col">
+          <figcaption class="artwork-caption"><em>Sun</em>, ink on paper w digital manipulation</figcaption>
+        </figure>
+
+        <figure class="artwork-item right-col">
           <img src="dad.jpg" alt="Dad" />
-        </div>
+          <figcaption class="artwork-caption"><em>Dad</em>, ink on paper w digital manipulation</figcaption>
+        </figure>
 
-        <div class="span-full">
-          <img src="nets.jpg" alt="Nets" />
-        </div>
+        <figure class="artwork-item span-full">
+          <img src="nets.jpg" alt="Nest" />
+          <figcaption class="artwork-caption"><em>Nest</em>, digital drawing</figcaption>
+        </figure>
 
-        <div class="left-col">
-          <img src="nets3.jpg" alt="Nets 3" />
-        </div>
+        <figure class="artwork-item left-col">
+          <img src="nets3.jpg" alt="Nest Detail" />
+          <figcaption class="artwork-caption"><em>Nest (detail)</em>, digital drawing</figcaption>
+        </figure>
+
+      </div>
 
       </div>
 
