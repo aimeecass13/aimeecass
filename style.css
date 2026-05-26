@@ -537,7 +537,7 @@ body {
   .page-nav {
     position: -webkit-sticky !important; /* Safari compatibility */
     position: sticky !important;
-    top: 2rem !important;                /* Gap margin from the top window view edge */
+    top: 0.9rem !important;              /* FIXED: Set to exactly 0.9rem to perfectly match the body padding */
     align-self: start !important;        /* Prevents the sidebar box from matching the text block height */
     height: max-content !important;      /* Wraps structural margins tightly around your tree link data */
   }
