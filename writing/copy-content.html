@@ -29,16 +29,19 @@
       font-size: 0.78rem;
       margin-top: 0.1rem;
     }
-    /* Styles to center the logo and set its size */
-    .logo-centered-container {
-      display: flex;
-      justify-content: center;
-      margin-top: 1rem;
-      margin-bottom: 1.5rem;
-    }
-    .logo-centered-container img {
-      width: 80px; /* Approximately 2cm on a standard screen */
+    /* Updated styles for the floating wrapped logo */
+    .logo-wrapped-left {
+      float: left;
+      width: 68px; /* 15% smaller than 80px */
       height: auto;
+      margin-right: 1.2rem; /* Adds clean spacing between logo and text */
+      margin-bottom: 0.5rem; /* Prevents text elements below from crowding it */
+    }
+    /* Fix to prevent the layout elements below from breaking into the wrap */
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
     }
   </style>
 </head>
@@ -122,14 +125,13 @@
 
           <p class="work-section-heading"><a href="https://www.watarrkafoundation.com.au/" target="_blank" rel="noopener noreferrer" class="essay-subtitle-link"><strong>Watarrka Foundation</strong></a> <em>— Not-for-profit, Northern Territory</em></p>
 
-          <p>Articles and newsletters for an Australian NFP supporting Indigenous youth in the Northern Territory. Work covers education initiatives, project updates and fundraising appeals.</p>
-
-          <!-- Centered Logo with direct file path -->
-          <div class="logo-centered-container">
-            <img src="logobig.png" alt="Watarrka Foundation logo" />
+          <!-- Wrapped Layout block -->
+          <div class="clearfix">
+            <img src="logobig.png" alt="Watarrka Foundation logo" class="logo-wrapped-left" />
+            <p style="margin-top: 0;">Articles and newsletters for an Australian NFP supporting Indigenous youth in the Northern Territory. Work covers education initiatives, project updates and fundraising appeals.</p>
           </div>
 
-          <p class="article-entry">
+          <p class="article-entry" style="margin-top: 1.5rem;">
             — <a href="../pdfs/interview.pdf" target="_blank" rel="noopener noreferrer" class="essay-subtitle-link">On Caring for Country with Watarrka Ranger Doug Taylor</a>
             <span class="article-descriptor">Interview</span>
           </p>
