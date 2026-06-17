@@ -1,18 +1,3 @@
-/* ─── CUSTOM FONTS ──────────────────────────────────────── */
-@font-face {
-  font-family: 'Office Code Pro';
-  src: url('./fonts/officecodepro-regular.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Office Code Pro Medium';
-  src: url('./fonts/officecodepro-medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-}
-
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -24,23 +9,23 @@
   --active-highlight: #F2F0CE;
   --black: #1a1a1a;
   --white: #ffffff;
-  --font-mono: 'Office Code Pro', monospace;
-  --font-serif: 'Office Pro', monospace;
-  --font-title: 'Office Code Pro Medium', monospace;
+  --font-mono: 'Space Mono', monospace;
+  --font-serif: 'Lora', serif;
 }
 
 body {
   background: var(--white);
   color: var(--black);
   font-family: var(--font-serif);
-  font-size: 88%;
+  font-size: 87%; /* CHANGED: Scaled the base font size down a bit more across the site */
   font-weight: 500;
   padding: 0.9rem;
   max-width: 1120px;
 }
 
-/* ─── GLOBAL IMAGE SAFETY FIX ───────────────────────────── */
-/* Targets content photos so they don't blow up massive */
+/* ─── GLOBAL IMAGE SAFETY FIXES ─────────────────────────── */
+
+/* Safely constraints your standard images/photos so they don't grow huge */
 .page-content img,
 .magazine-photo {
   max-width: 680px !important;
@@ -48,18 +33,16 @@ body {
   height: auto !important;
 }
 
-/* REFINED: Prevents smaller utility icons/logos from blowing up */
-img.contact-icon, 
-img[class*="logo"], 
-img[class*="icon"] {
-  width: auto !important;
-  max-width: 100% !important;
+/* FIXED: Explicitly protects your wrapped logo element from blowing up large */
+img.logo-wrapped-left {
+  width: 68px !important; /* Forces it to maintain its proper compact width */
+  height: auto !important;
 }
 
 /* ─── SITE NAME ─────────────────────────────────────────── */
 
 .site-name {
-  font-family: var(--font-title);
+  font-family: var(--font-mono);
   font-weight: 700;
   font-size: 1.4rem;
   letter-spacing: 0.06em;
@@ -124,8 +107,8 @@ img[class*="icon"] {
 .tree li,
 .subtree li,
 .subsubtree li {
-  line-height: 1.1; 
-  margin-bottom: 0.2rem; 
+  line-height: 1.1; /* Keeps your tree nav tightly breathing at 1.1 */
+  margin-bottom: 0.12rem;
 }
 
 .tree > li > span {
@@ -224,13 +207,13 @@ img[class*="icon"] {
 
 .page-nav {
   width: 100%;
-  padding-right: 8.2rem; /* Shrunk down to move content closer to your nav */
+  padding-right: 3.5rem; /* Kept closer position to the line element */
 }
 
 .page-content {
   width: 100%;
   border-left: 1px solid #e8e8e8;
-  padding-left: 1.5rem; /* Keeps the spacing between the line and content consistent */
+  padding-left: 1.5rem; /* Kept content hugging distance precisely consistent */
   min-width: 0;
   max-width: 100%;
 }
@@ -244,16 +227,16 @@ img[class*="icon"] {
   width: 100%;
 }
 
-/* FIXED: Targets the lead intro paragraph directly to ensure it spans across both tracks */
-.about-columns > p:first-of-type,
+/* FIXED: Forces the first structural layout header/paragraph element on your about page to break across both columns */
+.about-columns > *:first-child,
 .about-lead-mono {
+  grid-column: 1 / -1 !important;
   font-family: var(--font-mono), monospace; 
   font-size: 0.75rem;                       
   text-transform: uppercase;                
   letter-spacing: 0.05em;                   
   color: #555555;                           
   margin-bottom: 1.8rem;
-  grid-column: 1 / -1 !important; /* Spans across both text columns */
 }
 
 .about-text-col {
@@ -332,7 +315,7 @@ img[class*="icon"] {
 
 .essay-body p {
   font-family: var(--font-serif);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 500;
   line-height: 1.5;
   color: var(--black);
