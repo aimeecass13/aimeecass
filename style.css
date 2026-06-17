@@ -47,6 +47,12 @@ img,
   height: auto !important;
 }
 
+/* ADDED: Explicit fix to prevent the text-wrapped logo from blowing up massive */
+img.logo-wrapped-left {
+  width: 68px !important; 
+  height: auto !important;
+}
+
 /* ─── SITE NAME ─────────────────────────────────────────── */
 
 .site-name {
