@@ -115,7 +115,7 @@ img,
 .tree li,
 .subtree li,
 .subsubtree li {
-  line-height: 1.45; /* CHANGED: Increased from 1 to give the menu sidebar breathing room */
+  line-height: 1.1; /* CHANGED: Increased from 1 to give the menu sidebar breathing room */
   margin-bottom: 0.2rem; /* Added slightly more space between items */
 }
 
