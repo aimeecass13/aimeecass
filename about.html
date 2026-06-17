@@ -34,6 +34,9 @@
       letter-spacing: 0.05em;                   
       color: #555555;                           
       margin-bottom: 1.8rem;
+      
+      /* Structural Grid Fix: Forces it to cross both columns on desktop and aligns everything left */
+      grid-column: 1 / -1; 
     }
   </style>
 </head>
@@ -106,13 +109,12 @@
       </nav>
     </div>
 
- <div class="page-content">
+    <div class="page-content">
       <div class="about-columns">
         
         <p class="about-lead-mono">Writer, editor and artist based between Australia and the UK.</p>
         
         <div class="about-text-col">
-
           <p class="about-bio">
             At the core of my work is a love of language; how the right word or well-crafted phrase can tell a story, capture a character or conjure a sense of place in an instant. That same instinct for precision carries through everything I make, from conversation design and editorial to my art practice.
           </p>
@@ -133,13 +135,6 @@
             I grew up near the Blue Mountains in New South Wales. When I'm not making, you can probably find me outside.
           </p>
         </div>
-
-        <div class="about-media-col">
-          <img src="portrait.webp" alt="Aimee Cass portrait" class="about-portrait" />
-        </div>
-
-      </div>
-    </div>
 
         <div class="about-media-col">
           <img src="portrait.webp" alt="Aimee Cass portrait" class="about-portrait" />
