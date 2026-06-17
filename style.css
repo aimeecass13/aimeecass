@@ -33,6 +33,7 @@ body {
   background: var(--white);
   color: var(--black);
   font-family: var(--font-serif);
+  font-size: 93%; /* Scaled down everything slightly by a touch */
   font-weight: 500;
   padding: 0.9rem;
   max-width: 1120px;
@@ -206,14 +207,12 @@ body {
 
 .page-nav {
   width: 100%;
-  /* CHANGED: Increased from 7.5rem to give a wider space before the line */
   padding-right: 9.5rem; 
 }
 
 .page-content {
   width: 100%;
   border-left: 1px solid #e8e8e8;
-  /* CHANGED: Reduced from 3.5rem so the line "hugs" your essay/page content tightly */
   padding-left: 1.5rem; 
   min-width: 0;
   max-width: 100%;
@@ -266,7 +265,7 @@ body {
 
 .essay-title {
   font-family: var(--font-serif);
-  font-size: 1rem; /* CHANGED: Sized up to match the reference screenshot */
+  font-size: 1rem;
   font-weight: 500;
   color: var(--black);
   margin-bottom: 0.5rem;
@@ -274,7 +273,7 @@ body {
 
 .essay-year {
   font-weight: 500;
-  color: var(--olive); /* CHANGED: Set to your global olive accent color */
+  color: var(--olive);
 }
 
 .essay-subtitle {
@@ -282,8 +281,8 @@ body {
   font-size: 0.78rem;
   font-weight: 500;
   color: var(--black);
-  margin-bottom: 2.5rem; /* CHANGED: Added breathing room before the body paragraphs */
-  font-style: italic; /* CHANGED: Forced the bracketed line into italics */
+  margin-bottom: 2.5rem;
+  font-style: italic;
 }
 
 .essay-subtitle-link,
@@ -370,190 +369,4 @@ body {
 }
 
 .contact-icon {
-  width: 14px !important;
-  height: 14px !important;
-  max-width: 14px !important;
-  max-height: 14px !important;
-  color: var(--black);
-  flex-shrink: 0;
-  display: inline-block;
-}
-
-.contact-link,
-.contact-link:link,
-.contact-link:visited,
-.contact-link:active {
-  color: var(--black) !important;
-  text-decoration: underline;
-  text-decoration-color: var(--olive);
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 2px;
-  -webkit-text-fill-color: var(--black) !important;
-}
-
-.contact-link:hover {
-  text-decoration-color: var(--black);
-}
-
-/* ─── VIDEO ─────────────────────────────────────────────── */
-
-.video-container {
-  width: 100%;
-  max-width: 680px; /* FIXED: Constraints video width to perfectly match essays and magazines */
-  display: flex;
-  flex-direction: column;
-}
-
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  height: 0;
-  margin-bottom: 0.6rem;
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.video-caption {
-  font-family: var(--font-serif);
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: #666666;
-  line-height: 1.5;
-}
-
-.caption-link,
-.caption-link:link,
-.caption-link:visited,
-.caption-link:active {
-  color: #666666 !important;
-  text-decoration: underline;
-  text-decoration-color: var(--olive);
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 2px;
-  -webkit-text-fill-color: #666666 !important;
-}
-
-.caption-link:hover {
-  color: var(--black) !important;
-  -webkit-text-fill-color: var(--black) !important;
-  text-decoration-color: var(--black);
-}
-
-/* ─── MAGAZINE ──────────────────────────────────────────── */
-
-.magazine-container {
-  width: 100%;
-  max-width: 680px;
-  box-sizing: border-box;
-}
-
-.magazine-banner {
-  font-family: var(--font-serif);
-  font-size: 0.78rem;
-  font-weight: 500;
-  line-height: 1.5;
-  margin-bottom: 0.8rem;
-  font-style: italic; /* Keeps it italicized as requested */
-}
-
-.magazine-banner .caption-link,
-.magazine-banner .caption-link:link,
-.magazine-banner .caption-link:visited,
-.magazine-banner .caption-link:active {
-  color: #666666 !important;
-  text-decoration: underline;
-  text-decoration-color: var(--olive);
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 2px;
-  -webkit-text-fill-color: #666666 !important;
-}
-
-.magazine-banner .caption-link:hover {
-  color: var(--black) !important;
-  -webkit-text-fill-color: var(--black) !important;
-  text-decoration-color: var(--black);
-}
-
-.magazine-image-wrapper {
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-.magazine-photo {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-}
-/* ─── MOBILE ────────────────────────────────────────────── */
-
-@media (max-width: 768px) {
-  .page-layout {
-    display: block;
-  }
-
-  .page-nav {
-    padding-right: 0;
-    margin-bottom: 1.5rem;
-  }
-
-  .page-content {
-    border-left: none;
-    border-top: 1px solid #e8e8e8;
-    padding-left: 0;
-    padding-top: 1.5rem;
-  }
-
-  .about-columns {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  .cv-columns {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  .essay-container {
-    max-width: 100%;
-  }
-
-  .magazine-container {
-    max-width: 100%;
-  }
-
-  .about-lead-mono {
-    font-family: var(--font-mono), monospace; 
-    font-size: 0.75rem;                       
-    text-transform: uppercase;                
-    letter-spacing: 0.05em;                   
-    color: #555555;                           
-    margin-bottom: 1.8rem;
-  }
-} 
-
-/* ─── DESKTOP STICKY SIDEBAR ────────────────────────────── */
-
-@media (min-width: 769px) {
-  /* Forces the main container grid framework to allow layout flow scrolling */
-  .page-layout {
-    overflow: visible !important;
-  }
-
-  /* Anchors the menu sidebar smoothly to the view screen */
-  .page-nav {
-    position: -webkit-sticky !important; /* Safari compatibility */
-    position: sticky !important;
-    top: 0.9rem !important;              /* FIXED: Set to exactly 0.9rem to perfectly match the body padding */
-    align-self: start !important;        /* Prevents the sidebar box from matching the text block height */
-    height: max-content !important;      /* Wraps structural margins tightly around your tree link data */
-  }
-}
+  width: 14px !important
