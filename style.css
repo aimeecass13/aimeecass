@@ -17,6 +17,7 @@
   --active-highlight: #F2F0CE;
   --black: #1a1a1a;
   --white: #ffffff;
+  /* Swapped Lora and Space Mono out for Office Code Pro */
   --font-mono: 'Office Code Pro', monospace;
   --font-serif: 'Office Code Pro', monospace;
 }
@@ -112,4 +113,437 @@ body {
   display: inline-block;
 }
 
-.subtree > li >
+.subtree > li > span {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 0.78rem;
+  color: var(--black);
+  text-decoration: none;
+  padding-left: 1.2rem;
+  display: inline-block;
+}
+
+.chevron {
+  display: inline-block;
+  margin-right: 0.08rem;
+  text-decoration: none;
+  color: var(--olive);
+}
+
+.tree > li > a,
+.subtree > li > a,
+.subsubtree > li > a {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 0.78rem;
+  color: var(--black);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tree > li > a .label,
+.subtree > li > a .label,
+.subsubtree > li > a .label {
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+
+.tree > li > a:hover .label,
+.subtree > li > a:hover .label,
+.subsubtree > li > a:hover .label {
+  text-decoration-color: var(--black);
+}
+
+.tree > li > a {
+  padding-left: 0.6rem;
+  display: inline-block;
+}
+
+.subtree > li > a {
+  padding-left: 1.2rem;
+  display: inline-block;
+}
+
+.subsubtree > li > a {
+  padding-left: 1.8rem;
+  display: inline-block;
+}
+
+/* ─── ACTIVE STATE ──────────────────────────────────────── */
+
+.top-links a.active,
+.tree a.active .label,
+.subtree a.active .label,
+.subsubtree a.active .label {
+  color: var(--black);
+  text-decoration: none;
+  background-color: var(--active-highlight);
+  display: inline;
+  padding: 0 0.25em;
+  margin: 0 -0.25em;
+  border-radius: 1px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* ─── PAGE LAYOUT ───────────────────────────────────────── */
+
+.page-layout {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0;
+  align-items: flex-start;
+}
+
+.page-nav {
+  width: 100%;
+  padding-right: 9.5rem; 
+}
+
+.page-content {
+  width: 100%;
+  border-left: 1px solid #e8e8e8;
+  padding-left: 1.5rem; 
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* ─── ABOUT PAGE ────────────────────────────────────────── */
+
+.about-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 2rem;
+  width: 100%;
+}
+
+.about-text-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-bio {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.about-link,
+.about-link:link,
+.about-link:visited,
+.about-link:active {
+  color: var(--black) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+  -webkit-text-fill-color: var(--black) !important;
+}
+
+.about-link:hover {
+  text-decoration-color: var(--black);
+}
+
+/* ─── ESSAY PAGE ────────────────────────────────────────── */
+
+.essay-container {
+  max-width: 550px;
+}
+
+.essay-title {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.essay-year {
+  font-weight: 500;
+  color: var(--olive);
+}
+
+.essay-subtitle {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: 2.5rem;
+  font-style: italic;
+}
+
+.essay-subtitle-link,
+.essay-subtitle-link:link,
+.essay-subtitle-link:visited,
+.essay-subtitle-link:active {
+  color: var(--black) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+  -webkit-text-fill-color: var(--black) !important;
+}
+
+.essay-subtitle-link:hover {
+  text-decoration-color: var(--black);
+}
+
+.essay-body p {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+/* ─── CV PAGE ───────────────────────────────────────────── */
+
+.cv-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 2rem;
+}
+
+.cv-section {
+  margin-bottom: 1.6rem;
+}
+
+.cv-section-title {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--black);
+  border-top: 1px solid var(--black);
+  padding-top: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+.cv-entry {
+  margin-bottom: 1rem;
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.65;
+  color: var(--black);
+}
+
+.cv-entry .role { font-style: normal; }
+.cv-entry .org  { font-style: italic; }
+.cv-entry .date { font-style: normal; }
+
+/* ─── CONTACT PAGE ──────────────────────────────────────── */
+
+.contact-container {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.contact-intro {
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.contact-icon {
+  width: 14px !important;
+  height: 14px !important;
+  max-width: 14px !important;
+  max-height: 14px !important;
+  color: var(--black);
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.contact-link,
+.contact-link:link,
+.contact-link:visited,
+.contact-link:active {
+  color: var(--black) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+  -webkit-text-fill-color: var(--black) !important;
+}
+
+.contact-link:hover {
+  text-decoration-color: var(--black);
+}
+
+/* ─── VIDEO ─────────────────────────────────────────────── */
+
+.video-container {
+  width: 100%;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin-bottom: 0.6rem;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-caption {
+  font-family: var(--font-serif);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #666666;
+  line-height: 1.5;
+}
+
+.caption-link,
+.caption-link:link,
+.caption-link:visited,
+.caption-link:active {
+  color: #666666 !important;
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+  -webkit-text-fill-color: #666666 !important;
+}
+
+.caption-link:hover {
+  color: var(--black) !important;
+  -webkit-text-fill-color: var(--black) !important;
+  text-decoration-color: var(--black);
+}
+
+/* ─── MAGAZINE ──────────────────────────────────────────── */
+
+.magazine-container {
+  width: 100%;
+  max-width: 680px;
+  box-sizing: border-box;
+}
+
+.magazine-banner {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+  font-style: italic;
+}
+
+.magazine-banner .caption-link,
+.magazine-banner .caption-link:link,
+.magazine-banner .caption-link:visited,
+.magazine-banner .caption-link:active {
+  color: #666666 !important;
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+  -webkit-text-fill-color: #666666 !important;
+}
+
+.magazine-banner .caption-link:hover {
+  color: var(--black) !important;
+  -webkit-text-fill-color: var(--black) !important;
+  text-decoration-color: var(--black);
+}
+
+.magazine-image-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.magazine-photo {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ─── MOBILE ────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .page-layout {
+    display: block;
+  }
+
+  .page-nav {
+    padding-right: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .page-content {
+    border-left: none;
+    border-top: 1px solid #e8e8e8;
+    padding-left: 0;
+    padding-top: 1.5rem;
+  }
+
+  .about-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .cv-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .essay-container {
+    max-width: 100%;
+  }
+
+  .magazine-container {
+    max-width: 100%;
+  }
+
+  .about-lead-mono {
+    font-family: var(--font-mono), monospace; 
+    font-size: 0.75rem;                       
+    text-transform: uppercase;                
+    letter-spacing: 0.05em;                   
+    color: #555555;                           
+    margin-bottom: 1.8rem;
+  }
+}
+
+/* ─── DESKTOP STICKY SIDEBAR ────────────────────────────── */
+
+@media (min-width: 769px) {
+  .page-layout {
+    overflow: visible !important;
+  }
+
+  .page-nav {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0.9rem !important;              
+    align-self: start !important;        
+    height: max-content !important;      
+  }
+}
