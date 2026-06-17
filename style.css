@@ -1,8 +1,7 @@
 /* ─── CUSTOM FONTS ──────────────────────────────────────── */
 @font-face {
   font-family: 'Office Code Pro';
-  /* Assumes CSS file is inside a folder (like /css/). If it's in the root, change '../' to './' */
-  src: url('../Fonts/officecodepro-regular.otf') format('opentype');
+  src: url('./fonts/officecodepro-regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -18,7 +17,6 @@
   --active-highlight: #F2F0CE;
   --black: #1a1a1a;
   --white: #ffffff;
-  /* Both variables now point to your single custom font */
   --font-mono: 'Office Code Pro', monospace;
   --font-serif: 'Office Code Pro', monospace;
 }
@@ -31,3 +29,87 @@ body {
   padding: 0.9rem;
   max-width: 1120px;
 }
+
+/* ─── SITE NAME ─────────────────────────────────────────── */
+
+.site-name {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--olive);
+  display: inline-block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  line-height: 1.25;
+}
+
+/* ─── TOP LINKS ─────────────────────────────────────────── */
+
+.top-links {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.top-links li {
+  line-height: 1.5;
+}
+
+.top-links a {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 0.92rem;
+  color: var(--black);
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+
+.top-links a:hover {
+  text-decoration-color: var(--black);
+}
+
+/* ─── NAV SECTIONS ──────────────────────────────────────── */
+
+.nav-section {
+  margin-bottom: 0.8rem;
+}
+
+.nav-section-title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 0.92rem;
+  color: var(--black);
+  line-height: 1.6;
+  margin-bottom: 0.1rem;
+}
+
+/* ─── TREE NAV ──────────────────────────────────────────── */
+
+.tree,
+.subtree,
+.subsubtree {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tree li,
+.subtree li,
+.subsubtree li {
+  line-height: 1;
+  margin-bottom: 0.12rem;
+}
+
+.tree > li > span {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 0.78rem;
+  color: var(--black);
+  text-decoration: none;
+  padding-left: 0.6rem;
+  display: inline-block;
+}
+
+.subtree > li >
