@@ -241,7 +241,7 @@ img.logo-wrapped-left {
   width: 100%;
 }
 
-/* FIXED: Moved global lead-mono styles here so it works on desktop and stretches across both columns */
+/* FIX: This must be outside the mobile query and explicitly set to 1 / -1 */
 .about-lead-mono {
   font-family: var(--font-mono), monospace; 
   font-size: 0.75rem;                       
@@ -249,7 +249,9 @@ img.logo-wrapped-left {
   letter-spacing: 0.05em;                   
   color: #555555;                           
   margin-bottom: 1.8rem;
-  grid-column: 1 / -1; /* Forces the bio intro sentence to cross both grid tracks */
+  
+  /* Structural Grid Fix: forces the item to span from the first grid line to the last */
+  grid-column: 1 / span 2; 
 }
 
 .about-text-col {
