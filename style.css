@@ -33,7 +33,7 @@ body {
   background: var(--white);
   color: var(--black);
   font-family: var(--font-serif);
-  font-size: 93%;
+  font-size: 93%; /* Kept your preferred touch-smaller text sizing */
   font-weight: 500;
   padding: 0.9rem;
   max-width: 1120px;
@@ -42,7 +42,7 @@ body {
 /* ─── GLOBAL IMAGE SAFETY FIX ───────────────────────────── */
 img, 
 .magazine-photo {
-  max-width: 680px !important; /* Prevents images from ever blowing up large */
+  max-width: 680px !important; /* Forces your pictures to stay bounded perfectly */
   width: 100% !important;
   height: auto !important;
 }
@@ -115,8 +115,8 @@ img,
 .tree li,
 .subtree li,
 .subsubtree li {
-  line-height: 1.1; /* CHANGED: Increased from 1 to give the menu sidebar breathing room */
-  margin-bottom: 0.2rem; /* Added slightly more space between items */
+  line-height: 1.1; /* Kept at 1.1 so it doesn't look overly spaced out */
+  margin-bottom: 0.2rem; 
 }
 
 .tree > li > span {
@@ -233,6 +233,17 @@ img,
   grid-template-columns: 1fr 1fr;
   gap: 0 2rem;
   width: 100%;
+}
+
+/* FIXED: Moved global lead-mono styles here so it works on desktop and stretches across both columns */
+.about-lead-mono {
+  font-family: var(--font-mono), monospace; 
+  font-size: 0.75rem;                       
+  text-transform: uppercase;                
+  letter-spacing: 0.05em;                   
+  color: #555555;                           
+  margin-bottom: 1.8rem;
+  grid-column: 1 / -1; /* Forces the bio intro sentence to cross both grid tracks */
 }
 
 .about-text-col {
@@ -529,15 +540,6 @@ img,
 
   .magazine-container {
     max-width: 100%;
-  }
-
-  .about-lead-mono {
-    font-family: var(--font-mono), monospace; 
-    font-size: 0.75rem;                       
-    text-transform: uppercase;                
-    letter-spacing: 0.05em;                   
-    color: #555555;                           
-    margin-bottom: 1.8rem;
   }
 } 
 
