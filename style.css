@@ -33,7 +33,7 @@ body {
   background: var(--white);
   color: var(--black);
   font-family: var(--font-serif);
-  font-size: 93%; /* Kept your preferred touch-smaller text sizing */
+  font-size: 88%; /* Kept your preferred touch-smaller text sizing */
   font-weight: 500;
   padding: 0.9rem;
   max-width: 1120px;
