@@ -33,10 +33,18 @@ body {
   background: var(--white);
   color: var(--black);
   font-family: var(--font-serif);
-  font-size: 93%; /* Scaled down everything slightly by a touch */
+  font-size: 93%;
   font-weight: 500;
   padding: 0.9rem;
   max-width: 1120px;
+}
+
+/* ─── GLOBAL IMAGE SAFETY FIX ───────────────────────────── */
+img, 
+.magazine-photo {
+  max-width: 680px !important; /* Prevents images from ever blowing up large */
+  width: 100% !important;
+  height: auto !important;
 }
 
 /* ─── SITE NAME ─────────────────────────────────────────── */
@@ -107,8 +115,8 @@ body {
 .tree li,
 .subtree li,
 .subsubtree li {
-  line-height: 1;
-  margin-bottom: 0.12rem;
+  line-height: 1.45; /* CHANGED: Increased from 1 to give the menu sidebar breathing room */
+  margin-bottom: 0.2rem; /* Added slightly more space between items */
 }
 
 .tree > li > span {
@@ -369,4 +377,182 @@ body {
 }
 
 .contact-icon {
-  width: 14px !important
+  width: 14px !important;
+  height: 14px !important;
+  max-width: 14px !important;
+  max-height: 14px !important;
+  color: var(--black);
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.contact-link,
+.contact-link:link,
+.contact-link:visited,
+.contact-link:active {
+  color: var(--black) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+  -webkit-text-fill-color: var(--black) !important;
+}
+
+.contact-link:hover {
+  text-decoration-color: var(--black);
+}
+
+/* ─── VIDEO ─────────────────────────────────────────────── */
+
+.video-container {
+  width: 100%;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin-bottom: 0.6rem;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-caption {
+  font-family: var(--font-serif);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #666666;
+  line-height: 1.5;
+}
+
+.caption-link,
+.caption-link:link,
+.caption-link:visited,
+.caption-link:active {
+  color: #666666 !important;
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+  -webkit-text-fill-color: #666666 !important;
+}
+
+.caption-link:hover {
+  color: var(--black) !important;
+  -webkit-text-fill-color: var(--black) !important;
+  text-decoration-color: var(--black);
+}
+
+/* ─── MAGAZINE ──────────────────────────────────────────── */
+
+.magazine-container {
+  width: 100%;
+  max-width: 680px;
+  box-sizing: border-box;
+}
+
+.magazine-banner {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+  font-style: italic;
+}
+
+.magazine-banner .caption-link,
+.magazine-banner .caption-link:link,
+.magazine-banner .caption-link:visited,
+.magazine-banner .caption-link:active {
+  color: #666666 !important;
+  text-decoration: underline;
+  text-decoration-color: var(--olive);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+  -webkit-text-fill-color: #666666 !important;
+}
+
+.magazine-banner .caption-link:hover {
+  color: var(--black) !important;
+  -webkit-text-fill-color: var(--black) !important;
+  text-decoration-color: var(--black);
+}
+
+.magazine-image-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* ─── MOBILE ────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .page-layout {
+    display: block;
+  }
+
+  .page-nav {
+    padding-right: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .page-content {
+    border-left: none;
+    border-top: 1px solid #e8e8e8;
+    padding-left: 0;
+    padding-top: 1.5rem;
+  }
+
+  .about-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .cv-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .essay-container {
+    max-width: 100%;
+  }
+
+  .magazine-container {
+    max-width: 100%;
+  }
+
+  .about-lead-mono {
+    font-family: var(--font-mono), monospace; 
+    font-size: 0.75rem;                       
+    text-transform: uppercase;                
+    letter-spacing: 0.05em;                   
+    color: #555555;                           
+    margin-bottom: 1.8rem;
+  }
+} 
+
+/* ─── DESKTOP STICKY SIDEBAR ────────────────────────────── */
+
+@media (min-width: 769px) {
+  .page-layout {
+    overflow: visible !important;
+  }
+
+  .page-nav {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0.9rem !important;              
+    align-self: start !important;        
+    height: max-content !important;      
+  }
+}
