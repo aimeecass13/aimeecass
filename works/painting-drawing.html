@@ -19,7 +19,6 @@
       margin-bottom: 1rem;
     }
 
-    /* CHANGED: Reconfigured grid setup to use 4 columns instead of 3 */
     .painting-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -49,20 +48,15 @@
       line-height: 1.3;
       text-align: left;
     }
-
-    /* ─── CHANGED: GRID PLACEMENT SIZING CLASSES ─── */
     
-    /* Spans full width across all 4 grid units */
     .span-4 {
       grid-column: span 4;
     }
 
-    /* Spans 2 grid units cleanly */
     .span-2 {
       grid-column: span 2;
     }
 
-    /* Starts on the second column line and spans the 3 remaining columns to the far right */
     .right-3 {
       grid-column: 2 / span 3;
     }
@@ -73,7 +67,6 @@
         gap: 1.5rem;
       }
       
-      /* CHANGED: Overrides 4-column sizing layout cleanly on mobile views */
       .span-4, .span-2, .right-3 {
         grid-column: span 1 !important;
       }
@@ -106,7 +99,7 @@
             </li>
             <li>
               <span>Literary</span>
-              <ul class="subtree">
+              <ul class="tree">
                 <li>
                   <span>Editorial</span>
                   <ul class="subsubtree">
@@ -114,14 +107,16 @@
                   </ul>
                 </li>
                 <li>
-                  <span>Essays</span>
+                  <span>Essays &amp; Criticism</span>
                   <ul class="subsubtree">
                     <li><a href="../writing/on-slipping.html"><span class="chevron">›</span> <span class="label">On Slipping</span></a></li>
+                    <li><a href="../writing/turning-stones.html"><span class="chevron">›</span> <span class="label">Turning Stones</span></a></li>
                   </ul>
                 </li>
                 <li>
-                  <span>Fiction &amp; Poetry</span>
+                  <span>Creative</span>
                   <ul class="subsubtree">
+                    <li><a href="../writing/insignificantly-significant.html"><span class="chevron">›</span> <span class="label">Insignificantly Significant</span></a></li>
                     <li><a href="../writing/island.html"><span class="chevron">›</span> <span class="label">Island</span></a></li>
                     <li><a href="../writing/la-nina.html"><span class="chevron">›</span> <span class="label">La Niña</span></a></li>
                   </ul>

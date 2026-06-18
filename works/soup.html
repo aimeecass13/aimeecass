@@ -11,12 +11,11 @@
   <link rel="stylesheet" href="../style.css" />
   
   <style>
-    /* Responsive aspect-ratio box matching your script portfolio assets */
     .soup-video-wrapper {
       position: relative;
       width: 100%;
       max-width: 680px;
-      padding-bottom: 56.25%; /* Fixed 16:9 widescreen layout standard */
+      padding-bottom: 56.25%;
       height: 0;
       margin-bottom: 1.5rem;
     }
@@ -29,13 +28,12 @@
       border: 0;
     }
 
-   /* Primary text-pairing description block layout */
    .soup-text-grid {
       display: grid;
       grid-template-columns: 1fr 3fr;
       gap: 2rem;
       margin-top: 1.5rem;
-      margin-bottom: 1.5rem; /* Locks down the space below the text */
+      margin-bottom: 1.5rem;
       max-width: 680px;
     }
 
@@ -45,8 +43,8 @@
       font-weight: 500;
       color: #666666;
       line-height: 1.5;
-      margin-top: 0;          /* Erases extra browser top-padding */
-      margin-bottom: 0.5rem; /* Tighter gap so the grid snaps closer up */
+      margin-top: 0;
+      margin-bottom: 0.5rem;
       max-width: 680px;
     }
     .soup-label {
@@ -67,15 +65,14 @@
     .soup-body-text p:last-child {
       margin-bottom: 0;
     }
-    /* Mosaic lookbook grid map architecture */
+    
     .soup-image-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* 2 balanced vertical lanes */
+      grid-template-columns: repeat(2, 1fr);
       gap: 8px;
       max-width: 680px;
     }
 
-    /* Image spans configurations */
     .soup-span-2 {
       grid-column: span 2;
     }
@@ -113,7 +110,7 @@
             </li>
             <li>
               <span>Literary</span>
-              <ul class="subtree">
+              <ul class="tree">
                 <li>
                   <span>Editorial</span>
                   <ul class="subsubtree">
@@ -121,14 +118,16 @@
                   </ul>
                 </li>
                 <li>
-                  <span>Essays</span>
+                  <span>Essays &amp; Criticism</span>
                   <ul class="subsubtree">
                     <li><a href="../writing/on-slipping.html"><span class="chevron">›</span> <span class="label">On Slipping</span></a></li>
+                    <li><a href="../writing/turning-stones.html"><span class="chevron">›</span> <span class="label">Turning Stones</span></a></li>
                   </ul>
                 </li>
                 <li>
-                  <span>Fiction &amp; Poetry</span>
+                  <span>Creative</span>
                   <ul class="subsubtree">
+                    <li><a href="../writing/insignificantly-significant.html"><span class="chevron">›</span> <span class="label">Insignificantly Significant</span></a></li>
                     <li><a href="../writing/island.html"><span class="chevron">›</span> <span class="label">Island</span></a></li>
                     <li><a href="../writing/la-nina.html"><span class="chevron">›</span> <span class="label">La Niña</span></a></li>
                   </ul>
