@@ -9,13 +9,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=IBM+Plex+Mono:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../style.css" />
+  <style>
+    .works-header {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--black);
+      margin-bottom: 1.6rem;
+    }
+  </style>
 </head>
 <body>
 
   <div class="page-layout">
 
     <div class="page-nav">
-      <a class="site-name" href="/">Aimee Cass</a>
+      <a class="site-name" href="../">Aimee Cass</a>
 
       <nav>
         <ul class="top-links">
@@ -36,7 +45,7 @@
             </li>
             <li>
               <span>Literary</span>
-              <ul class="tree">
+              <ul class="subtree">
                 <li>
                   <span>Editorial</span>
                   <ul class="subsubtree">
@@ -47,15 +56,19 @@
                   <span>Essays &amp; Criticism</span>
                   <ul class="subsubtree">
                     <li><a href="../writing/on-slipping.html"><span class="chevron">›</span> <span class="label">On Slipping</span></a></li>
-                    <li><a href="../writing/turning-stones.html"><span class="chevron">›</span> <span class="label">Turning Stones</span></a></li>
+                    <li><a href="../writing/turningstones.html"><span class="chevron">›</span> <span class="label">Turning Stones</span></a></li>
                   </ul>
                 </li>
                 <li>
                   <span>Creative</span>
                   <ul class="subsubtree">
-                    <li><a href="../writing/insignificantly-significant.html"><span class="chevron">›</span> <span class="label">Insignificantly Significant</span></a></li>
                     <li><a href="../writing/island.html"><span class="chevron">›</span> <span class="label">Island</span></a></li>
                     <li><a href="../writing/la-nina.html"><span class="chevron">›</span> <span class="label">La Niña</span></a></li>
+                    <li>
+                      <a href="../writing/insignificantly-significant.html" style="display: inline-block; white-space: normal; line-height: 1.4; vertical-align: top;">
+                        <span class="chevron">›</span> <span class="label">Insignificantly<br />Significant</span>
+                      </a>
+                    </li>
                   </ul>
                 </li>
               </ul>
@@ -84,9 +97,7 @@
     <div class="page-content">
       <div class="magazine-container">
         
-        <p class="magazine-banner">
-          Coming soon.
-        </p>
+        <h1 class="works-header">Photography <span class="essay-year">— Coming soon</span></h1>
 
         <div class="magazine-image-wrapper">
           <img src="tree.jpg" alt="Photography feature — Tree" class="magazine-photo" />
