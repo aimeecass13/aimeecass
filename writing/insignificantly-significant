@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insignificantly Significant — Aimee Cass</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Space+Mono:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  
+  <style>
+    /* Spacing header gap to perfectly match your no-art-speak layout */
+    .essay-title {
+      margin-bottom: 1.6rem;
+    }
+
+    /* Keeps images bound neatly within your single essay column proportions */
+    .insig-photo-block {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-top: 2rem; /* Adds a clean breathing gap between text and images, and between each photo */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-layout">
+
+    <!-- NAVIGATION SIDEBAR (Looking up 1 directory back to root) -->
+    <div class="page-nav">
+      <a class="site-name" href="../">Aimee Cass</a>
+
+      <nav>
+        <ul class="top-links">
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../cv.html">CV</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-section">
+          <div class="nav-section-title">Writing</div>
+          <ul class="tree">
+            <li>
+              <span>Professional</span>
+              <ul class="subtree">
+                <li><a href="conversation-design.html"><span class="chevron">›</span> <span class="label">Conversation Design</span></a></li>
+                <li><a href="copy-content.html"><span class="chevron">›</span> <span class="label">Copy &amp; Content</span></a></li>
+                <li><a href="script.html"><span class="chevron">›</span> <span class="label">Scriptwriting</span></a></li>
+              </ul>
+            </li>
+            <li>
+              <span>Literary</span>
+              <ul class="subtree">
+                <li>
+                  <span>Editorial</span>
+                  <ul class="subsubtree">
+                    <li><a href="no-art-speak.html"><span class="chevron">›</span> <span class="label">No Art Speak Magazine</span></a></li>
+                  </ul>
+                </li>
+                <li>
+                  <span>Essays</span>
+                  <ul class="subsubtree">
+                    <li><a href="on-slipping.html"><span class="chevron">›</span> <span class="label">On Slipping</span></a></li>
+                  </ul>
+                </li>
+                <li>
+                  <span>Fiction &amp; Poetry</span>
+                  <ul class="subsubtree">
+                    <li><a href="island.html"><span class="chevron">›</span> <span class="label">Island</span></a></li>
+                    <li><a href="la-nina.html"><span class="chevron">›</span> <span class="label">La Niña</span></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-title">Works</div>
+          <ul class="tree">
+            <li>
+              <span>Hot Glass</span>
+              <ul class="subtree">
+                <li><a href="../works/soup.html"><span class="chevron">›</span> <span class="label">SOUP</span></a></li>
+                <li><a href="../works/calderas.html"><span class="chevron">›</span> <span class="label">Calderas</span></a></li>
+                <li><a href="../works/ios-vases.html"><span class="chevron">›</span> <span class="label">Io's Vases</span></a></li>
+              </ul>
+            </li>
+            <li><a href="../works/photography.html"><span class="chevron">›</span> <span class="label">Photography</span></a></li>
+            <li><a href="../works/painting-drawing.html"><span class="chevron">›</span> <span class="label">Painting &amp; Drawing</span></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- MAIN SINGLE COLUMN PAGE CONTENT -->
+    <div class="page-content">
+      <div class="essay-container">
+        
+        <!-- Heading with title italicized as an artwork, year left normal -->
+        <h1 class="essay-title">
+          <em>Insignificantly Significant</em> <span class="essay-year">(2020)</span>
+        </h1>
+        
+        <div class="essay-body">
+          <p>
+            In 2020, a handwritten memory of mine was memorialised on a bronze plaque in Enmore Park, Sydney, as part of Sam Holt's <a href="https://www.instituteforpublicart.org/case-studies/insignificantly-significant/" target="_blank" class="about-link"><em>Insignificantly Significant</em></a> public art project. The plaque is fixed to the concrete slab beside the bench where I used to sit.
+          </p>
+          <p>
+            The memory is from 2016: "I'd bought half a dozen oysters I couldn't afford and I ate them alone in the park. Sunday. Watching groups of friends meet and children play I felt both together and alone. I had just moved out of home."
+          </p>
+        </div>
+
+        <!-- Vertically stacked images inside the single column container -->
+        <img src="insig1.jpg" alt="Sam Holt's Insignificantly Significant Project - Image 1" class="insig-photo-block" />
+        <img src="insig2.jpg" alt="Sam Holt's Insignificantly Significant Project - Image 2" class="insig-photo-block" />
+        <img src="insig3.jpg" alt="Sam Holt's Insignificantly Significant Project - Image 3" class="insig-photo-block" />
+
+      </div>
+    </div> 
+
+  </div> 
+
+</body>
+</html>
