@@ -11,22 +11,16 @@
   <link rel="stylesheet" href="../style.css" />
   
   <style>
-    /* Two-column layout specifically customized for the Turning Stones feature template */
-    .stones-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 0 4rem;
-      width: 100%;
-      max-width: 900px;
+    /* Spacing header gap to perfectly match your no-art-speak layout */
+    .essay-title {
+      margin-bottom: 1.6rem;
     }
 
-    .stones-text-col {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .stones-image-col {
+    /* Target alignment box ensuring your cover graphic scales beautifully */
+    .stones-cover-link {
+      display: block;
       width: 100%;
+      height: auto;
     }
 
     .stones-cover-img {
@@ -34,14 +28,6 @@
       width: 100%;
       height: auto;
       max-width: 100%;
-    }
-
-    /* Mobile breakdown layout rule matching standard site behavior */
-    @media (max-width: 768px) {
-      .stones-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem 0;
-      }
     }
   </style>
 </head>
@@ -124,10 +110,11 @@
         Turning Stones: A Critical Geomorphology for the Anthropocene <span class="essay-year">(2024)</span>
       </h1>
       
-      <div class="stones-grid">
+      <!-- Using your global about-columns layout grid for 1fr 1fr matching size and alignment -->
+      <div class="about-columns">
         
         <!-- Left Column: The Essay Body Text -->
-        <div class="stones-text-col essay-body">
+        <div class="about-text-col essay-body">
           <p>
             <em>Turning Stones</em> is a work of eco-literary criticism written as the capstone for my honours degree at the University of Sydney. In it, I ask how representations of the geologic shape the texts around them.
           </p>
@@ -135,13 +122,18 @@
             I look at three novels — Joan Lindsay's <em>Picnic at Hanging Rock</em>, Malcolm Lowry's <em>Under the Volcano</em> and Kōbō Abe's <em>The Woman in the Dunes</em> — and consider what rocks, volcanoes and sand are doing within them. What is the agency of the geologic? And how does it morph the time, space and material dimensions of these texts?
           </p>
           <p>
-            We live in fraught times. The shape of the Earth is changing, and humanity cannot escape its complicity in that change. In <em>Turning Stones</em>, I introduce an original reading methodology I call <em>critical geomorphology</em> to argue that how we read the stories of rocks is inseparable from how we talk about our world, and may offer insight into how we must change to go on living within it.
+            We live in fraught times. The shape of the Earth is changing, and humanity cannot escape its complicity in that change. In <em>Turning Stones</em>, I introduce an original reading methodology I call critical geomorphology to argue that how we read the stories of rocks is inseparable from how we talk about our world, and may offer insight into how we must change to go on living within it.
+          </p>
+          <p>
+            You can read it <a href="TurningStonesPDF.pdf" target="_blank" class="about-link">here</a>.
           </p>
         </div>
 
-        <!-- Right Column: The Cover Art Graphic -->
-        <div class="stones-image-col">
-          <img src="TurningStonesCover.png" alt="Turning Stones: A Critical Geomorphology for the Anthropocene Book Cover" class="stones-cover-img" />
+        <!-- Right Column: The Cover Art Graphic (Linked directly to PDF) -->
+        <div class="about-media-col">
+          <a href="TurningStonesPDF.pdf" target="_blank" class="stones-cover-link">
+            <img src="TurningStonesCover.PNG" alt="Turning Stones: A Critical Geomorphology for the Anthropocene Book Cover" class="stones-cover-img" />
+          </a>
         </div>
 
       </div>
