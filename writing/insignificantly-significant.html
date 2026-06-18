@@ -21,7 +21,12 @@
       width: 100%;
       height: auto;
       display: block;
-      margin-top: 2rem; /* Adds a clean breathing gap between text and images, and between each photo */
+      margin-top: 12px; /* CHANGED: Matches the exact 12px layout gap seen on Io's Vases */
+    }
+
+    /* Gives the very first image a standard breathing room break from the paragraph block text */
+    .insig-photo-block:first-of-type {
+      margin-top: 2rem;
     }
   </style>
 </head>
